@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753286195671,
+  "timestamp": 1753286983140,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -28,7 +28,9 @@
         "ignoreVary": true
       },
       "urls": [
+        "/portfolio/assets/cv/Firas_Abdallah_CV_en.pdf",
         "/portfolio/assets/cv/Firas_Abdallah_CV_enn.pdf",
+        "/portfolio/assets/cv/Firas_Abdallah_CV_fr.pdf",
         "/portfolio/assets/cv/Firas_Abdallah_CV_frr.pdf",
         "/portfolio/assets/fonts/Calibre/Calibre-Light.ttf",
         "/portfolio/assets/fonts/Calibre/Calibre-Light.woff",
@@ -191,8 +193,10 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/portfolio/assets/cv/Firas_Abdallah_CV_enn.pdf": "51b7e9abb6c7baad254d57d39c19c256560ada10",
-    "/portfolio/assets/cv/Firas_Abdallah_CV_frr.pdf": "1e6247d478545a7873e7dcf6fc2621c8bbe0b33e",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_en.pdf": "51b7e9abb6c7baad254d57d39c19c256560ada10",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_enn.pdf": "870af61e4f8e525caa3efadf91f481763aa95e8d",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_fr.pdf": "1e6247d478545a7873e7dcf6fc2621c8bbe0b33e",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_frr.pdf": "72ab06820fdbd19b48e113df8f577ed90b4f5353",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.ttf": "8eccfc3783b04d13dec5887a15c3e00fd28bef7c",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.woff": "e3fbab74fa86b97c78ad1b1965b327fe5b2a1adb",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.woff2": "70021b39a260c5f53d2ec5ba30f37163bbe0ef14",
@@ -237,10 +241,10 @@
     "/portfolio/assets/fonts/SFMono/SFMono-SemiboldItalic.woff": "4bb2ddc7da8064698328e123bd3ec673f674a90d",
     "/portfolio/assets/fonts/SFMono/SFMono-SemiboldItalic.woff2": "3621c6894388833626fd4cf132087a3f46a54a21",
     "/portfolio/assets/fonts/SFMono/stylesheet.css": "9d845bf2b6a9e53e38bfc797758fbe38c2b99470",
-    "/portfolio/assets/i18n/de.json": "b04f1388ee60d076275be8d2d44ab4086cbc268f",
-    "/portfolio/assets/i18n/en.json": "1137603d1b56524e742cf9ac8f5a2ba39d8158f9",
-    "/portfolio/assets/i18n/es.json": "32eaa64a304a03b02392b27654a423ab65573df4",
-    "/portfolio/assets/i18n/fr.json": "53ec31d20bc9e00686e84692f6515ef743f3de20",
+    "/portfolio/assets/i18n/de.json": "4c1b633f9145957c03c9e1b17d9f3e7a34bbab07",
+    "/portfolio/assets/i18n/en.json": "c0c877112e622e891aba5212be982c3183a1f12b",
+    "/portfolio/assets/i18n/es.json": "34ef3f4dd77eab8dbd4c6d32e785ce706c623618",
+    "/portfolio/assets/i18n/fr.json": "7d6bb171e13f7e3890cdc4c419a242433681d250",
     "/portfolio/assets/icons/cv plantilla.pdf": "566ecef3024cc9a771c7c80420a3726793a1e26d",
     "/portfolio/assets/icons/folder.svg": "024e52150f03c8e0f77d17979a27ae94830678be",
     "/portfolio/assets/icons/icon-128x128.png": "6ec621358618a961643b4ad9552b2e181e72ac8e",
