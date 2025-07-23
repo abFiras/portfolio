@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753281211072,
+  "timestamp": 1753286195671,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -191,8 +191,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/portfolio/assets/cv/Firas_Abdallah_CV_en.pdf": "3dc90bf8ee8d1d4010fb64ebba6718045865f218",
-    "/portfolio/assets/cv/Firas_Abdallah_CV_fr.pdf": "531f8dcc460bd1999090e61c91f755833b26c59f",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_en.pdf": "51b7e9abb6c7baad254d57d39c19c256560ada10",
+    "/portfolio/assets/cv/Firas_Abdallah_CV_fr.pdf": "1e6247d478545a7873e7dcf6fc2621c8bbe0b33e",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.ttf": "8eccfc3783b04d13dec5887a15c3e00fd28bef7c",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.woff": "e3fbab74fa86b97c78ad1b1965b327fe5b2a1adb",
     "/portfolio/assets/fonts/Calibre/Calibre-Light.woff2": "70021b39a260c5f53d2ec5ba30f37163bbe0ef14",
