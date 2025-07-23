@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-portfolio": "ng build --configuration production",
-    "build:prod": "ng build --configuration production --base-href https://abFiras.com/",
+    "build:prod": "ng build --configuration production --base-href https://abfiras-portfolio.netlify.app/",
     "deploy": "npm run build:prod && ngh --dir=dist/abFiras-portfolio --cname=abFiras.com",
     "deploy:ci": "ngh --dir=dist/abFiras-portfolio --cname=abFiras.com --no-silent",
     "predeploy": "npm run build:prod",
