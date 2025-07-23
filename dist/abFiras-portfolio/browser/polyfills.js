@@ -2448,7 +2448,7 @@ patchBrowser(Zone$1);
 @angular/localize/fesm2022/localize2.mjs:
 @angular/localize/fesm2022/init.mjs:
   (**
-   * @license Angular v20.0.6
+   * @license Angular v20.1.2
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
