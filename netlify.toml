@@ -1,6 +1,6 @@
 [build]
   command = "npm install --legacy-peer-deps && npm run build-portfolio"
-  publish = "dist/abFiras-portfolio"
+  publish = "dist/abFiras-portfolio/browser"
 
 [build.environment]
   NODE_VERSION = "20"
