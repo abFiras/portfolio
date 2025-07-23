@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753286983140,
+  "timestamp": 1753288057095,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -100,6 +100,7 @@
         "/portfolio/assets/images/andresjosehr-portfolio.png",
         "/portfolio/assets/images/andresjosehr-preview.png",
         "/portfolio/assets/images/banner-video2.mp4",
+        "/portfolio/assets/images/banner-video22.mp4",
         "/portfolio/assets/images/countries-viewer.png",
         "/portfolio/assets/images/cronometraje-proyect.png",
         "/portfolio/assets/images/devops.png",
@@ -264,7 +265,8 @@
     "/portfolio/assets/images/agrourbana/agrourbana5.png": "fbd83bd8ce5840cccae8c7076e77c6f3f0ccdfa9",
     "/portfolio/assets/images/andresjosehr-portfolio.png": "c3f5f78ae98aef40b42a045d63ab92861ce069ea",
     "/portfolio/assets/images/andresjosehr-preview.png": "710c45795ebadba3c723bb4fab4761d4c093151a",
-    "/portfolio/assets/images/banner-video2.mp4": "55ca5715c1f62d5c8e772446eed392dc9f381ea6",
+    "/portfolio/assets/images/banner-video2.mp4": "e1d366490f266716bda611af142fe1c2c29fce3e",
+    "/portfolio/assets/images/banner-video22.mp4": "55ca5715c1f62d5c8e772446eed392dc9f381ea6",
     "/portfolio/assets/images/countries-viewer.png": "e1f49421394a27b2904c3f7cb8a90f35c93948c2",
     "/portfolio/assets/images/cronometraje-proyect.png": "f22cab2f9b8788892fd6074c6c23596651270840",
     "/portfolio/assets/images/devops.png": "45cd895f270d31593cf4731cffcd2eb55a7fa104",
