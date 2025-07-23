@@ -1,0 +1,161 @@
+{
+  "Header.Item1": "Sobre Mí",
+  "Header.Item2": "Experiencia",
+  "Header.Item3": "Proyectos",
+  "Header.Item4": "Contacto",
+  "Header.cvBtn": "Currículum",
+  "Header.cvName": "Firas_Abdallah_CV_en.pdf",
+
+  "Banner.Pretitle": "¡Hola! Mi nombre es",
+  "Banner.Name": "Firas Abdallah",
+  "Banner.Title": "Desarrollador Full-Stack e Ingeniero DevOps",
+  "Banner.Description": "Recién graduado en ingeniería de software con <span class='underline'>experiencia práctica</span> en desarrollo full-stack y DevOps a través de prácticas y proyectos académicos. Especializado en <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, <span class='underline'>Python</span>, arquitectura de microservicios, <span class='underline'>CI/CD</span>, <span class='underline'>Docker</span>, <span class='underline'>Kubernetes</span> e Infraestructura como Código. Motivado por la automatización, el aprendizaje y la construcción de pipelines de desarrollo eficientes.",
+  "Banner.ActionBtn": "Saluda",
+
+  "AboutMe.Title": "Sobre Mí",
+  "AboutMe.Paragraphs": [
+    "Como <span class='underline'>graduado en ingeniería de software</span> con experiencia práctica tanto en <span class='underline'>Desarrollo Full-Stack</span> como en <span class='underline'>Ingeniería DevOps</span>, aporto una comprensión integral de todo el ciclo de vida del desarrollo de software. Mi trayectoria me ha llevado a través de varios roles y proyectos donde he construido aplicaciones escalables y automatizado pipelines de despliegue.",
+    "Mi experiencia abarca desde el desarrollo de arquitecturas de microservicios con Spring Boot y Angular hasta la implementación de pipelines DevOps completos con Jenkins, GitLab CI/CD, ArgoCD y Kubernetes. Me apasiona crear soluciones eficientes y automatizadas que conecten el desarrollo con las operaciones.",
+    "Me motiva aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real, ya sea construyendo plataformas de e-learning, soluciones IoT o implementando medidas de seguridad.",
+    "Algunas de las tecnologías con las que he entrenado y trabajado incluyen (pero no se limitan a):"
+  ],
+
+  "Experience.Title": "Experiencia",
+  "Experience.Jobs": [
+    {
+      "Tab": "DPC Digital",
+      "Title": "Practicante de Proyecto Final",
+      "Date": "Dic 2024 - Jun 2025",
+      "Description": [
+        "Desarrollo de HiveMind Academy – plataforma de microservicios de e-learning",
+        "Implementación completa de pipeline DevOps: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
+        "Desarrollo de arquitectura de microservicios usando Spring Boot, Angular, Python Flask",
+        "Integración de Keycloak para autenticación, APIs de Google Calendar y Gemini AI",
+        "Implementación de Infraestructura como Código y orquestación de contenedores"
+      ]
+    },
+    {
+      "Tab": "QuantStats",
+      "Title": "Desarrollador Full-Stack",
+      "Date": "Jul - Ago 2024",
+      "Description": [
+        "Desarrollo de módulo multimedia y sistema de gestión de usuarios",
+        "Implementación usando stack tecnológico Spring Boot, Angular y MySQL",
+        "Desarrollo de funciones de carga multimedia y dashboard de analíticas",
+        "Diseño de base de datos y desarrollo de API para gestión de contenido",
+        "Desarrollo frontend con principios de diseño responsivo"
+      ]
+    },
+    {
+      "Tab": "FST El Manar",
+      "Title": "Desarrollador IoT",
+      "Date": "Feb - Ago 2022",
+      "Description": [
+        "Desarrollo de estación meteorológica Wi-Fi autónoma con sensores IoT",
+        "Integración de varios sensores ambientales para recolección de datos",
+        "Implementación de protocolos de comunicación inalámbrica",
+        "Desarrollo de sistema de visualización y monitoreo de datos",
+        "Integración hardware-software y pruebas"
+      ]
+    }
+  ],
+
+  "FeatureProjects.Title": "Mis Proyectos",
+  "FeatureProjects.Label": "Proyecto Destacado",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "HiveMind Academy",
+      "Description": "Plataforma integral de microservicios de e-learning con pipeline DevOps completo. Incluye autenticación de usuarios con <span class='underline'>Keycloak</span>, <span class='underline'>integración con Google Calendar</span>, <span class='underline'>integración con Gemini AI</span> y orquestación completa de contenedores. Construida con arquitectura moderna de microservicios y despliegue automatizado.",
+      "imgs": [
+        "assets/images/hive1.PNG",
+        "assets/images/hive2.png",
+        "assets/images/hive3.png",
+        "assets/images/hive4.png",
+        "assets/images/hive5.png"
+      ],
+      "Technologies": ["Spring Boot", "Angular", "Python Flask", "Docker", "Kubernetes", "Jenkins", "ArgoCD", "Keycloak"]
+    },
+    {
+      "Title": "EldSync",
+      "Description": "Aplicación de cuidado de adultos mayores diseñada para ayudar a gestionar y monitorear servicios de atención geriátrica. Incluye gestión integral de usuarios, programación de citas, monitoreo de salud y manejo seguro de datos con <span class='underline'>Spring Security</span>. Construida con tecnologías web modernas y diseño responsivo.",
+      "imgs": [
+        "assets/images/eld1.png",
+        "assets/images/eld2.png",
+        "assets/images/eld3.png",
+        "assets/images/eld4.png",
+        "assets/images/eld5.png"
+      ],
+      "Technologies": ["Spring Boot", "Angular", "Spring Security", "MySQL", "TypeScript"]
+    },
+    {
+      "Title": "Plataforma QuantStats",
+      "Description": "Plataforma de analíticas y estadísticas de fútbol que proporciona análisis integral de partidos, estadísticas de jugadores y métricas de rendimiento de equipos. Incluye procesamiento de datos en tiempo real, dashboards interactivos y analíticas avanzadas con backend <span class='underline'>Spring Boot</span> y frontend <span class='underline'>Angular</span> para una experiencia de usuario óptima.",
+      "imgs": [
+        "assets/images/quant1.png",
+        "assets/images/quant2.png",
+        "assets/images/quant3.png",
+        "assets/images/quant4.png"
+      ],
+      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "Analítica de Datos", "REST API"]
+    }
+  ],
+
+  "OtherProjects.Title": "Más Proyectos",
+  "OtherProjects.Projects": [
+    {
+      "Title": "EcoCycle",
+      "Description": "Plataforma de gestión de reciclaje con características de seguridad integradas desarrollada como aplicaciones de escritorio y web. Incluye seguimiento de residuos, gestión de centros de reciclaje.",
+      "imgs": ["assets/images/eco1.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["JavaFX", "Symfony", "MySQL", "Aplicación de Escritorio", "Plataforma Web"]
+    },
+    {
+      "Title": "Estación Meteorológica IoT",
+      "Description": "Estación meteorológica autónoma habilitada con Wi-Fi con múltiples sensores ambientales. Incluye recolección de datos en tiempo real, transmisión inalámbrica y dashboard de monitoreo basado en web.",
+      "imgs": ["assets/images/iot.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["IoT", "Wi-Fi", "Sensores", "Python", "Dashboard Web"]
+    },
+    {
+      "Title": "Demo de Pipeline DevOps",
+      "Description": "Demostración completa de pipeline CI/CD mostrando prácticas modernas de DevOps con pruebas automatizadas, construcción y despliegue a clúster Kubernetes.",
+      "imgs": ["assets/images/devops.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Jenkins", "GitLab CI/CD", "Docker", "Kubernetes", "ArgoCD"]
+    },
+    {
+      "Title": "Arquitectura de Microservicios",
+      "Description": "Implementación de muestra de arquitectura de microservicios demostrando descubrimiento de servicios, gateway de API y patrones de comunicación entre servicios.",
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Spring Boot", "Docker", "Kubernetes", "Descubrimiento de Servicios"]
+    },
+    {
+      "Title": "Evaluación de Seguridad y Pruebas de Penetración",
+      "Description": "Proyecto de evaluación de seguridad usando Kali Linux y Metasploit para simular ataques antes y después de desplegar un firewall pfSense, mostrando protección de red mejorada.",
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Pruebas de Penetración"]
+    },
+    {
+      "Title": "Infraestructura como Código",
+      "Description": "Configuraciones de Terraform y Ansible para aprovisionamiento automatizado de infraestructura y gestión de configuración en AWS.",
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Terraform", "Ansible", "AWS", "Infraestructura como Código", "Automatización"]
+    }
+  ],
+
+  "Contact.Pretitle": "Y... ¿Ahora?",
+  "Contact.Title": "¡Saluda!",
+  "Contact.Content": "Me encantará saber de ti si quieres discutir nuevas oportunidades. Escríbeme y te responderé tan pronto como vea tu mensaje.",
+  "Contact.Btn": "Contáctame",
+  "Contact.Email": "abdallah.firas@outlook.fr",
+  "Contact.Phone": "+216 93 637 575",
+  "Contact.Location": "El Ghazela, Ariana, Túnez",
+  "Contact.LinkedIn": "firas-abdallah",
+  "Contact.GitHub": "abFiras"
+}

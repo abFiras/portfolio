@@ -1,0 +1,389 @@
+@use "./../../../../variables.scss" as *;
+
+.about{
+
+    .about-description{
+        margin-top: 30px;
+        max-width: 480px;
+        
+        .skills-section-title {
+            color: #ccd6f6;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            font-family: $CodeFont;
+        }
+    }
+
+    .about-img-container{
+        margin: auto;
+        position: relative;
+        display: inline-block;
+        max-width: 350px;
+        width: 100%;
+
+        // Simplified and responsive background effect
+        &:after{
+            content: "";
+            border: 2px solid $Green;
+            z-index: 0;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, 
+                rgba(100, 255, 218, 0.08), 
+                rgba(100, 255, 218, 0.04)
+            );
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        // Simplified glow effect
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, 
+                rgba(100, 255, 218, 0.1) 0%, 
+                transparent 70%
+            );
+            border-radius: 8px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        &:hover {
+            &:after {
+                transform: translate(-8px, -8px);
+                border-color: rgba(100, 255, 218, 0.9);
+                box-shadow: 0 15px 35px rgba(100, 255, 218, 0.25);
+                background: linear-gradient(135deg, 
+                    rgba(100, 255, 218, 0.12), 
+                    rgba(100, 255, 218, 0.06)
+                );
+            }
+            
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        img{
+            z-index: 2;
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            filter: grayscale(100%) contrast(1.15) brightness(0.9);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            // Enhanced background for transparent images
+            background: linear-gradient(135deg, 
+                rgba(100, 255, 218, 0.03), 
+                rgba(100, 255, 218, 0.08),
+                rgba(100, 255, 218, 0.03)
+            );
+            
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(100, 255, 218, 0.1);
+
+            &.clickable {
+                cursor: pointer;
+
+                &:hover {
+                    filter: grayscale(0%) contrast(1.1) brightness(1.1);
+                    transform: scale(1.03) translateY(-3px);
+                    box-shadow: 
+                        0 20px 40px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(100, 255, 218, 0.4),
+                        0 0 25px rgba(100, 255, 218, 0.2);
+                }
+
+                &:active {
+                    transform: scale(0.98) translateY(1px);
+                    transition: all 0.1s ease;
+                }
+            }
+        }
+
+        // Responsive adjustments
+        @media (max-width: 1200px){
+            max-width: 300px;
+            
+            &:after {
+                top: 12px;
+                left: 12px;
+            }
+        }
+
+        @media (max-width: 992px){
+            max-width: 280px;
+        }
+
+        @media (max-width: 768px){
+            max-width: 250px;
+            
+            &:after {
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 500px){
+            max-width: 200px;
+            
+            &:after {
+                top: 8px;
+                left: 8px;
+            }
+        }
+
+        @media (max-width: 400px){
+            max-width: 180px;
+            
+            // Simplify effects on very small screens
+            &:after {
+                display: none;
+            }
+            
+            &:before {
+                display: none;
+            }
+            
+            img {
+                background: linear-gradient(135deg, 
+                    rgba(100, 255, 218, 0.06), 
+                    rgba(100, 255, 218, 0.1)
+                );
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .skills-list{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(140px,200px));
+        overflow: hidden;
+        padding: 0;
+        margin: 20px 0 0 0;
+        list-style: none;
+    }
+
+    .skill-element{
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        font-size: 13px;
+        font-family: $CodeFont;
+        color: $Slate;
+        transition: all 0.2s ease;
+
+        span{
+            padding-bottom: 5px;
+            transition: all 0.2s ease;
+        }
+
+        &:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #64ffda;
+            font-size: 14px;
+            line-height: 12px;
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            color: #ccd6f6;
+            transform: translateX(5px);
+            
+            &:before {
+                color: lighten($Green, 20%);
+                transform: scale(1.2);
+            }
+            
+            span {
+                color: #e6f1ff;
+            }
+        }
+    }
+}
+
+// Improved modal styles
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, 
+        rgba(10, 25, 47, 0.95), 
+        rgba(17, 34, 64, 0.95)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: modalFadeIn 0.3s ease-out;
+    
+    // Fallback for browsers without backdrop-filter support
+    @supports (backdrop-filter: blur(10px)) {
+        backdrop-filter: blur(10px);
+        background: linear-gradient(135deg, 
+            rgba(10, 25, 47, 0.8), 
+            rgba(17, 34, 64, 0.8)
+        );
+    }
+}
+
+.image-modal-container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    // Simplified background effect
+    &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        background: radial-gradient(ellipse at center, 
+            rgba(100, 255, 218, 0.08) 0%, 
+            transparent 60%
+        );
+        border-radius: 16px;
+        z-index: -1;
+    }
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.6),
+        0 0 0 2px rgba(100, 255, 218, 0.3),
+        0 0 30px rgba(100, 255, 218, 0.15);
+    
+    background: linear-gradient(135deg, 
+        rgba(100, 255, 218, 0.04), 
+        rgba(100, 255, 218, 0.08),
+        rgba(100, 255, 218, 0.04)
+    );
+    filter: contrast(1.1) brightness(1.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    &:hover {
+        transform: scale(1.02);
+        filter: contrast(1.15) brightness(1.1);
+        box-shadow: 
+            0 30px 60px rgba(0, 0, 0, 0.7),
+            0 0 0 2px rgba(100, 255, 218, 0.4),
+            0 0 40px rgba(100, 255, 218, 0.2);
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    background: rgba(100, 255, 218, 0.1);
+    border: 2px solid $Green;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $Green;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+        background: rgba(100, 255, 218, 0.2);
+        transform: scale(1.1);
+        color: $White;
+        border-color: lighten(#64ffda, 15%);
+        box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    span {
+        line-height: 1;
+        margin-top: -2px;
+    }
+}
+
+// Responsive modal adjustments
+@media (max-width: 768px) {
+    .image-modal-container {
+        max-width: 95vw;
+        max-height: 85vh;
+        
+        &::before {
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+        }
+    }
+
+    .modal-close-btn {
+        top: -40px;
+        right: 0;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-close-btn {
+        top: -35px;
+        right: 5px;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+}
+
+// Animation keyframes
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Responsive layout adjustments
+@media (min-width: 992px) and (max-width: 1300px){
+    .about-img-container{
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
