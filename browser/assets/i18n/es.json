@@ -1,0 +1,189 @@
+{
+  "Header.Item1": "Sobre mí",
+  "Header.Item2": "Experiencia",
+  "Header.Item3": "Proyectos",
+  "Header.Item4": "Contacto",
+  "Header.cvBtn": "CV",
+  "Header.cvName": "https://raw.githubusercontent.com/abFiras/cv/main/Firas_Abdallah_CV_es.pdf",
+  "Banner.Pretitle": "¡Hola! Mi nombre es",
+  "Banner.Name": "Firas Abdallah",
+  "Banner.Title": "Ingeniero de Software & Docente CS",
+  "Banner.Description": "Ingeniero de software especializado en <span class='underline'>desarrollo full-stack</span> y <span class='underline'>DevOps</span> — microservicios, pipelines CI/CD y herramientas de automatización. También enseño Informática <span class='underline'>Cambridge IGCSE & A-Level</span>, conectando la ingeniería en producción con la próxima generación de desarrolladores.",
+  "Banner.ActionBtn": "Saludar",
+
+  "AboutMe.Title": "Sobre mí",
+  "AboutMe.Paragraphs": [
+    "Soy <span class='underline'>ingeniero de software</span> con experiencia real en el desarrollo de sistemas full-stack y pipelines DevOps — desde microservicios con Spring Boot y Angular hasta infraestructura CI/CD completa con Jenkins, ArgoCD y Kubernetes.",
+    "Creo herramientas reales: <span class='underline'>HireFlow AI</span> automatiza todo el proceso de solicitud de empleo en menos de 60 segundos — reescribe tu CV con palabras clave optimizadas para ATS, compila un PDF, redacta una carta de presentación y envía el correo a RRHH. También estoy desarrollando un juego de Belote tunecina en Flutter.",
+    "Además de la ingeniería, enseño <span class='underline'>Informática Cambridge IGCSE & A-Level</span> — tutorizando a estudiantes en proyectos reales, incluido un <span class='underline'>sistema de gestión de biblioteca</span> que actualmente está desplegado y en uso en el colegio.",
+    "Algunas de las tecnologías con las que he trabajado (entre otras) :"
+  ],
+
+  "Experience.Title": "Experiencia",
+  "Experience.Jobs": [
+    {
+      "Tab": "DPC Digital",
+      "Title": "Prácticas de Fin de Estudios — Full-Stack & DevOps",
+      "Date": "Dic 2024 – Jun 2025",
+      "Description": [
+        "Desarrollo de HiveMind Academy — plataforma e-learning con arquitectura de microservicios",
+        "Implementación de un pipeline DevOps completo: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
+        "Desarrollo de microservicios con Spring Boot, Angular y Python Flask",
+        "Integración de Keycloak (SSO/auth), API de Google Calendar y Gemini AI",
+        "Infraestructura como código y orquestación de contenedores de extremo a extremo"
+      ]
+    },
+    {
+      "Tab": "QuantStats",
+      "Title": "Desarrollador Full-Stack",
+      "Date": "Jul – Ago 2024",
+      "Description": [
+        "Desarrollo de un módulo multimedia y sistema de gestión de usuarios",
+        "Stack técnico: Spring Boot, Angular y MySQL",
+        "Implementación de funcionalidades de carga multimedia y panel de analítica",
+        "Diseño de base de datos y desarrollo de APIs REST para gestión de contenido",
+        "Frontend responsive con Angular y TypeScript"
+      ]
+    },
+    {
+      "Tab": "FST El Manar",
+      "Title": "Desarrollador IoT",
+      "Date": "Feb – Ago 2022",
+      "Description": [
+        "Desarrollo de una estación meteorológica Wi-Fi autónoma con sensores ambientales IoT",
+        "Implementación de protocolos de comunicación inalámbrica para transmisión de datos en tiempo real",
+        "Desarrollo de un panel web de monitorización de datos de sensores en vivo",
+        "Integración hardware-software completa y pruebas"
+      ]
+    },
+    {
+      "Tab": "CIS Tunis",
+      "Title": "Profesor de Informática",
+      "Date": "Ago 2025 – Presente",
+      "Description": [
+        "Enseñanza de Informática IGCSE y A-Level (AS & A2) — Currículo Cambridge International",
+        "Tutorización de un estudiante A-Level en el desarrollo de un Sistema de Gestión de Biblioteca en Python, ahora desplegado y en uso activo en el colegio",
+        "Asistencia al Taller de Corrección Cambridge IGCSE & O Level CS (0478/0984) — Oct–Nov 2025",
+        "Certificado por Anthropic en <span class='underline'>AI Fluency for Educators</span>"
+      ]
+    }
+  ],
+
+  "FeatureProjects.Title": "Mis Proyectos",
+  "FeatureProjects.Label": "Proyecto Destacado",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "HireFlow AI",
+      "Description": "Aplicación de automatización de escritorio que gestiona todo el proceso de solicitud de empleo en menos de 60 segundos. Pega una oferta de trabajo y la IA reescribe tu <span class='underline'>CV en LaTeX</span> con palabras clave optimizadas para ATS, detecta automáticamente el idioma (oferta en francés → CV en francés), compila un <span class='underline'>PDF</span> limpio, redacta una carta de presentación natural y envía el correo a RRHH — totalmente automatizado.",
+      "imgs": [
+        "assets/images/hireflow1.png",
+                "assets/images/hireflow3.png",
+
+        "assets/images/hireflow2.png"
+      ],
+      "Technologies": ["Python", "IA / LLM", "LaTeX", "Automatización", "SMTP", "Generación de PDF"]
+    },
+    {
+      "Title": "HiveMind Academy",
+      "Description": "Plataforma e-learning de microservicios con pipeline DevOps completo. Incluye autenticación SSO con <span class='underline'>Keycloak</span>, <span class='underline'>integración de Google Calendar</span>, <span class='underline'>Gemini AI</span> y orquestación completa de contenedores con despliegue automatizado mediante ArgoCD y Kubernetes.",
+      "imgs": [
+        "assets/images/hive1.PNG",
+        "assets/images/hive2.png",
+        "assets/images/hive3.png",
+        "assets/images/hive4.png",
+        "assets/images/hive5.png"
+      ],
+      "Technologies": ["Spring Boot", "Angular", "Python Flask", "Docker", "Kubernetes", "Jenkins", "ArgoCD", "Keycloak"]
+    },
+    {
+      "Title": "EldSync",
+      "Description": "Aplicación web de atención a personas mayores con gestión completa de usuarios, programación de citas, monitorización de salud y manejo seguro de datos con <span class='underline'>Spring Security</span>. Interfaz moderna y responsive.",
+      "imgs": [
+        "assets/images/eld1.png",
+        "assets/images/eld2.png",
+        "assets/images/eld3.png",
+        "assets/images/eld4.png",
+        "assets/images/eld5.png"
+      ],
+      "Technologies": ["Spring Boot", "Angular", "Spring Security", "MySQL", "TypeScript"]
+    }
+  ],
+
+  "OtherProjects.Title": "Más Proyectos",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Belote Tunisie",
+      "Description": "Juego completo de Belote tunecina desarrollado con Flutter, con el reglamento tunecino íntegro, oponentes IA, seguimiento de puntuación y animaciones de cartas fluidas.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Flutter", "Dart", "Desarrollo de Juegos", "Lógica IA"]
+    },
+    {
+      "Title": "Constructor de Formularios Angular",
+      "Description": "Constructor de formularios dinámico con campos drag-and-drop, validación personalizada, exportación de datos (CSV/JSON) e importación — desarrollado íntegramente en Angular.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Angular", "TypeScript", "RxJS", "Exportación CSV"]
+    },
+    {
+      "Title": "Sistema de Gestión de Biblioteca",
+      "Description": "Aplicación de escritorio en Python co-desarrollada con un estudiante de A-Level. Actualmente desplegada y en uso activo en CIS International School of Tunis para gestionar la biblioteca del colegio.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Python", "Aplicación Desktop", "SQLite"]
+    },
+    {
+      "Title": "Plataforma QuantStats",
+      "Description": "Plataforma de análisis y estadísticas de fútbol con procesamiento de datos en tiempo real, paneles interactivos y análisis avanzado de partidos.",
+      "imgs": ["assets/images/quant1.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "REST API"]
+    },
+    {
+      "Title": "EcoCycle",
+      "Description": "Plataforma de gestión de reciclaje disponible como aplicación de escritorio (JavaFX) y web (Symfony). Seguimiento de residuos y gestión de centros de reciclaje.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["JavaFX", "Symfony", "MySQL"]
+    },
+    {
+      "Title": "Estación Meteorológica IoT",
+      "Description": "Estación meteorológica Wi-Fi autónoma con múltiples sensores ambientales, transmisión inalámbrica de datos en tiempo real y panel web de monitorización.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["IoT", "Python", "Wi-Fi", "Panel Web"]
+    },
+    {
+      "Title": "Evaluación de Seguridad",
+      "Description": "Proyecto de pruebas de penetración con Kali Linux y Metasploit para simular ataques antes y después de desplegar un firewall pfSense — demostrando una mejora medible en la seguridad de la red.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Seguridad de Red"]
+    },
+    {
+      "Title": "Demo Pipeline DevOps",
+      "Description": "Pipeline CI/CD completo con pruebas automatizadas, build y despliegue en Kubernetes usando Jenkins, GitLab CI, ArgoCD y Terraform.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Jenkins", "GitLab CI/CD", "Docker", "Kubernetes", "ArgoCD"]
+    }
+  ],
+
+  "Contact.Pretitle": "¿Y ahora?",
+  "Contact.Title": "¡Hola!",
+  "Contact.Content": "Estoy abierto a roles de ingeniería de software, proyectos freelance y colaboraciones técnicas. Si quieres hablar de oportunidades o simplemente charlar sobre tecnología, escríbeme y te responderé en cuanto vea tu mensaje.",
+  "Contact.Btn": "Contáctame",
+  "Contact.Email": "abdallah.firas@outlook.fr",
+  "Contact.Phone": "+216 93 637 575",
+  "Contact.Location": "El Ghazela, Ariana, Túnez",
+  "Contact.LinkedIn": "firas-abdallah",
+  "Contact.GitHub": "abFiras"
+}
