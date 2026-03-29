@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774811080177,
+  "timestamp": 1774811662320,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/portfolio/favicon.ico",
         "/portfolio/index.html",
-        "/portfolio/main-WISBYAB6.js",
+        "/portfolio/main-Z6QPG4GY.js",
         "/portfolio/manifest.webmanifest",
         "/portfolio/polyfills-CQZK2RGY.js",
         "/portfolio/styles-CXCE2DT6.css"
@@ -187,8 +187,8 @@
     "/portfolio/assets/images/quant4.png": "9216e737688e827fc4f2ea462b8ba69a81ceba9b",
     "/portfolio/assets/images/wolf logo.PNG": "936263f816ca8a88fc78cf246c35a2038abd33e3",
     "/portfolio/favicon.ico": "936263f816ca8a88fc78cf246c35a2038abd33e3",
-    "/portfolio/index.html": "ee7cd2093ee6c8e8c071b4e3abf37c541001233c",
-    "/portfolio/main-WISBYAB6.js": "c2183d5199a9a6c6594e120d9fbb33294244b70e",
+    "/portfolio/index.html": "75d0ee91a3fd4fbd33538d5c64296871c88d6672",
+    "/portfolio/main-Z6QPG4GY.js": "3fde9d9ec4fec2d342153ed913890a4a50701f4b",
     "/portfolio/manifest.webmanifest": "c8edb28266b02a8c803a110d571f1d1430d32845",
     "/portfolio/polyfills-CQZK2RGY.js": "bf02eddaeea9a385afd1d56994168bba943fc820",
     "/portfolio/styles-CXCE2DT6.css": "deda7a6d09aa3b11c61f9d668482b7ada4fe4faf"
