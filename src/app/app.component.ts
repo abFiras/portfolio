@@ -1,75 +1,83 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import Lenis from 'lenis';
-import { Title, Meta } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
-import {LanguageService} from "src/app/services/language/language.service"
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
-import { ParticlesService } from './services/particles/particles.service';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { LanguageService } from './services/language/language.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  standalone: false
 })
-export class AppComponent implements OnInit, OnDestroy{
-  title = 'Firas-Abdallah-portfolio';
-  private lenis: Lenis;
+export class AppComponent implements OnInit, AfterViewInit {
+  title = 'portfolio';
 
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-    private translateService: TranslateService,
-    private location: Location,
-    private languageService: LanguageService,
-    private particlesService: ParticlesService
-    ){
-    }
-  ngOnInit(): void{
+  constructor(private languageService: LanguageService) {}
 
-    this.languageService.initLanguage()
-
-    this.titleService.setTitle( "Firas Abdallah" );
-
-    this.metaService.addTags([
-      {name: 'keywords', content: 'software, developer'},
-      {name: 'description', content: 'Recién graduado en Ingeniería de Software, con experiencia práctica en desarrollo full-stack y DevOps a través de proyectos académicos y prácticas. Me apasiona proponer y ejecutar ideas, escribir y refactorizar código limpio, reutilizable y escalable, y aprender constantemente para aportar soluciones tecnológicas que mejoren la web.'},
-    ]);
-
-    // Inicializar Lenis para smooth scrolling
-    this.initLenis();
-
-    // Inicializar partículas globales después de un breve delay
-    setTimeout(() => {
-      this.particlesService.init();
-    }, 100);
+  ngOnInit(): void {
+    // Init language FIRST — before any child component tries to translate
+    this.languageService.initLanguage();
   }
 
-  private initLenis(): void {
-    this.lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      syncTouch: false
+  ngAfterViewInit(): void {
+    this.initLoader();
+    this.initCursor();
+    setTimeout(() => this.initScrollReveal(), 400);
+  }
+
+  private initLoader(): void {
+    const done = () => {
+      const loader = document.getElementById('page-loader');
+      if (loader) loader.classList.add('loaded');
+    };
+    if (document.readyState === 'complete') {
+      setTimeout(done, 3200);
+    } else {
+      window.addEventListener('load', () => setTimeout(done, 3200));
+    }
+    setTimeout(done, 5200); // hard fallback
+  }
+
+  private initCursor(): void {
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    if (!dot || !ring) return;
+
+    let rx = 0, ry = 0, cx = 0, cy = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      cx = e.clientX; cy = e.clientY;
+      dot.style.left = cx + 'px';
+      dot.style.top  = cy + 'px';
     });
 
-    // Función de animación
-    const raf = (time: number) => {
-      this.lenis.raf(time);
-      requestAnimationFrame(raf);
+    const animRing = () => {
+      rx += (cx - rx) * 0.1;
+      ry += (cy - ry) * 0.1;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animRing);
     };
-    requestAnimationFrame(raf);
+    animRing();
+
+    setTimeout(() => {
+      document.querySelectorAll(
+        'a, button, .main-btn, .skill-chip, .job-tab-btn, .project-card, .more-card, .nav-logo, .contact-cta-btn'
+      ).forEach(el => {
+        el.addEventListener('mouseenter', () => { dot.classList.add('hover');  ring.classList.add('hover'); });
+        el.addEventListener('mouseleave', () => { dot.classList.remove('hover'); ring.classList.remove('hover'); });
+      });
+    }, 600);
   }
 
-  ngOnDestroy(): void {
-    if (this.lenis) {
-      this.lenis.destroy();
-    }
+  private initScrollReveal(): void {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          (e.target as HTMLElement).classList.add('sr-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-    // Destruir partículas
-    this.particlesService.destroy();
+    document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale').forEach(el => obs.observe(el));
   }
-
 }

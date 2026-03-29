@@ -1,90 +1,73 @@
-@import "./../../../../variables.scss";
+@use "./../../../../variables.scss" as *;
 
-footer{
-    color: $LightSlate;
+footer {
+  position: relative;
+  padding: 20px 48px;
+  background: $Navy;
+  border-top: 1px solid rgba(100,255,218,0.06);
+}
 
-    .footer-left-bar:after, .footer-right-bar:after{
-        content: '';
-        display: block;
-        width: 1px;
-        height: 90px;
-        margin: 0 auto;
-        background-color: $LightSlate;
-    }
+/* ─── SIDE BARS (same fixed bars as banner) ─── */
+.footer-right-bar {
+  position: fixed; bottom: 0;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 16px;
+  z-index: 10;
+}
+.footer-left-bar {
+  left: 32px;
+  list-style: none; padding: 0; margin: 0;
+  li a {
+    color: $Slate; transition: color 0.3s, transform 0.3s; display: block;
+    &:hover { color: $Green; transform: translateY(-3px); }
+  }
+}
+.footer-right-bar {
+  right: 32px;
+  a {
+    writing-mode: vertical-rl;
+    font-family: $CodeFont; font-size: 11px;
+    letter-spacing: 0.15em; color: $Slate;
+    text-decoration: none; transition: color 0.3s, transform 0.3s;
+    &:hover { color: $Green; transform: translateY(-3px); }
+  }
+}
+.side-line-v {
+  width: 1px; height: 80px;
+  background: linear-gradient(to bottom, $Slate, transparent);
+}
 
-    .footer-left-bar li, .footer-right-bar li{
-        list-style: none;
-    }
+/* ─── BOTTOM CENTER ─── */
+.footer-bottom {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  padding: 24px 0 80px;
+}
+.footer-logo {
+  font-family: $CodeFont; font-size: 20px;
+  font-weight: 500; color: $Green;
+  letter-spacing: 0.08em;
+  .logo-bracket { color: rgba(100,255,218,0.35); }
+  margin-bottom: 4px;
+}
+.footer-copy {
+  font-family: $CodeFont; font-size: 12px;
+  letter-spacing: 0.06em; color: $Slate; margin: 0;
+  a { color: $Green; text-decoration: none; transition: color 0.3s; &:hover { color: $GoldAccent; } }
+}
 
-    .footer-left-bar{
-        position: fixed;
-        bottom: -16px;
-        left: 51px;
-        padding: 0;
+/* Mobile socials */
+.footer-mobile-socials { margin-top: 8px; gap: 10px; align-items: center; }
+.mobile-social-link {
+  font-family: $CodeFont; font-size: 12px; letter-spacing: 0.1em;
+  color: $Slate; text-decoration: none; transition: color 0.3s;
+  &:hover { color: $Green; }
+}
+.footer-sep { color: rgba(100,255,218,0.2); font-size: 12px; }
 
-        i{
-            font-size: 19px;
-            color: $LightSlate;
-        }
-
-        li{
-            margin: 20px 0px;
-
-            &:last-of-type {
-                margin-bottom: 33px;
-            }
-        }
-    }
-
-    .footer-right-bar{
-        position: fixed;
-        bottom: 0px;
-        right: 41px;
-        padding: 0;
-
-        li{
-            transform: rotate(90deg);
-        }
-
-        a{
-            font-family: $CodeFont;
-            font-size: 12px;
-            -webkit-letter-spacing: 0.1em;
-            -moz-letter-spacing: 0.1em;
-            -ms-letter-spacing: 0.1em;
-            letter-spacing: 0.1em;
-            -webkit-writing-mode: vertical-rl;
-            -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-            margin: 20px auto;
-            padding: 10px;
-            color: $LightSlate;
-        }
-    }
-    .footer-credits{
-        font-family: $CodeFont;
-        font-size: 12px;
-        line-height: 1;
-    
-        position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        margin-top: -60px;
-
-        a{
-            color: $LightSlate;
-            -webkit-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-            transition-property: all;
-            transition-duration: 0.25s;
-            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-            transition-delay: 0s;
-
-            &:hover, &:focus {
-                text-decoration: none;
-                color: $Green;
-            }
-        }
-    }
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1000px) {
+  .footer-left-bar, .footer-right-bar { display: none !important; }
+  footer { padding: 0 24px; }
+  .footer-bottom { padding-bottom: 40px; }
 }

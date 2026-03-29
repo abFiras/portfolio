@@ -1,61 +1,70 @@
 {
-  "Header.Item1": "Sobre Mí",
+  "Header.Item1": "Sobre mí",
   "Header.Item2": "Experiencia",
   "Header.Item3": "Proyectos",
   "Header.Item4": "Contacto",
-  "Header.cvBtn": "Currículum",
-  "Header.cvName": "Firas_Abdallah_CV_enn.pdf",
-
+  "Header.cvBtn": "CV",
+  "Header.cvName": "https://raw.githubusercontent.com/abFiras/cv/main/Firas_Abdallah_CV_es.pdf",
   "Banner.Pretitle": "¡Hola! Mi nombre es",
   "Banner.Name": "Firas Abdallah",
-  "Banner.Title": "Desarrollador Full-Stack e Ingeniero DevOps",
-  "Banner.Description": "Recién graduado en ingeniería de software con <span class='underline'>experiencia práctica</span> en desarrollo full-stack y DevOps a través de prácticas y proyectos académicos. Especializado en <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, <span class='underline'>Python</span>, arquitectura de microservicios, <span class='underline'>CI/CD</span>, <span class='underline'>Docker</span>, <span class='underline'>Kubernetes</span> e Infraestructura como Código. Motivado por la automatización, el aprendizaje y la construcción de pipelines de desarrollo eficientes.",
-  "Banner.ActionBtn": "Saluda",
+  "Banner.Title": "Ingeniero de Software & Docente CS",
+  "Banner.Description": "Ingeniero de software especializado en <span class='underline'>desarrollo full-stack</span> y <span class='underline'>DevOps</span> — microservicios, pipelines CI/CD y herramientas de automatización. También enseño Informática <span class='underline'>Cambridge IGCSE & A-Level</span>, conectando la ingeniería en producción con la próxima generación de desarrolladores.",
+  "Banner.ActionBtn": "Saludar",
 
-  "AboutMe.Title": "Sobre Mí",
+  "AboutMe.Title": "Sobre mí",
   "AboutMe.Paragraphs": [
-    "Como <span class='underline'>graduado en ingeniería de software</span> con experiencia práctica tanto en <span class='underline'>Desarrollo Full-Stack</span> como en <span class='underline'>Ingeniería DevOps</span>, aporto una comprensión integral de todo el ciclo de vida del desarrollo de software. Mi trayectoria me ha llevado a través de varios roles y proyectos donde he construido aplicaciones escalables y automatizado pipelines de despliegue.",
-    "Mi experiencia abarca desde el desarrollo de arquitecturas de microservicios con Spring Boot y Angular hasta la implementación de pipelines DevOps completos con Jenkins, GitLab CI/CD, ArgoCD y Kubernetes. Me apasiona crear soluciones eficientes y automatizadas que conecten el desarrollo con las operaciones.",
-    "Me motiva aprender nuevas tecnologías y aplicarlas para resolver problemas del mundo real, ya sea construyendo plataformas de e-learning, soluciones IoT o implementando medidas de seguridad.",
-    "Algunas de las tecnologías con las que he entrenado y trabajado incluyen (pero no se limitan a):"
+    "Soy <span class='underline'>ingeniero de software</span> con experiencia real en el desarrollo de sistemas full-stack y pipelines DevOps — desde microservicios con Spring Boot y Angular hasta infraestructura CI/CD completa con Jenkins, ArgoCD y Kubernetes.",
+    "Creo herramientas reales: <span class='underline'>HireFlow AI</span> automatiza todo el proceso de solicitud de empleo en menos de 60 segundos — reescribe tu CV con palabras clave optimizadas para ATS, compila un PDF, redacta una carta de presentación y envía el correo a RRHH. También estoy desarrollando un juego de Belote tunecina en Flutter.",
+    "Además de la ingeniería, enseño <span class='underline'>Informática Cambridge IGCSE & A-Level</span> — tutorizando a estudiantes en proyectos reales, incluido un <span class='underline'>sistema de gestión de biblioteca</span> que actualmente está desplegado y en uso en el colegio.",
+    "Algunas de las tecnologías con las que he trabajado (entre otras) :"
   ],
 
   "Experience.Title": "Experiencia",
   "Experience.Jobs": [
     {
       "Tab": "DPC Digital",
-      "Title": "Practicante de Proyecto Final",
-      "Date": "Dic 2024 - Jun 2025",
+      "Title": "Prácticas de Fin de Estudios — Full-Stack & DevOps",
+      "Date": "Dic 2024 – Jun 2025",
       "Description": [
-        "Desarrollo de HiveMind Academy – plataforma de microservicios de e-learning",
-        "Implementación completa de pipeline DevOps: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
-        "Desarrollo de arquitectura de microservicios usando Spring Boot, Angular, Python Flask",
-        "Integración de Keycloak para autenticación, APIs de Google Calendar y Gemini AI",
-        "Implementación de Infraestructura como Código y orquestación de contenedores"
+        "Desarrollo de HiveMind Academy — plataforma e-learning con arquitectura de microservicios",
+        "Implementación de un pipeline DevOps completo: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
+        "Desarrollo de microservicios con Spring Boot, Angular y Python Flask",
+        "Integración de Keycloak (SSO/auth), API de Google Calendar y Gemini AI",
+        "Infraestructura como código y orquestación de contenedores de extremo a extremo"
       ]
     },
     {
       "Tab": "QuantStats",
       "Title": "Desarrollador Full-Stack",
-      "Date": "Jul - Ago 2024",
+      "Date": "Jul – Ago 2024",
       "Description": [
-        "Desarrollo de módulo multimedia y sistema de gestión de usuarios",
-        "Implementación usando stack tecnológico Spring Boot, Angular y MySQL",
-        "Desarrollo de funciones de carga multimedia y dashboard de analíticas",
-        "Diseño de base de datos y desarrollo de API para gestión de contenido",
-        "Desarrollo frontend con principios de diseño responsivo"
+        "Desarrollo de un módulo multimedia y sistema de gestión de usuarios",
+        "Stack técnico: Spring Boot, Angular y MySQL",
+        "Implementación de funcionalidades de carga multimedia y panel de analítica",
+        "Diseño de base de datos y desarrollo de APIs REST para gestión de contenido",
+        "Frontend responsive con Angular y TypeScript"
       ]
     },
     {
       "Tab": "FST El Manar",
       "Title": "Desarrollador IoT",
-      "Date": "Feb - Ago 2022",
+      "Date": "Feb – Ago 2022",
       "Description": [
-        "Desarrollo de estación meteorológica Wi-Fi autónoma con sensores IoT",
-        "Integración de varios sensores ambientales para recolección de datos",
-        "Implementación de protocolos de comunicación inalámbrica",
-        "Desarrollo de sistema de visualización y monitoreo de datos",
-        "Integración hardware-software y pruebas"
+        "Desarrollo de una estación meteorológica Wi-Fi autónoma con sensores ambientales IoT",
+        "Implementación de protocolos de comunicación inalámbrica para transmisión de datos en tiempo real",
+        "Desarrollo de un panel web de monitorización de datos de sensores en vivo",
+        "Integración hardware-software completa y pruebas"
+      ]
+    },
+    {
+      "Tab": "CIS Tunis",
+      "Title": "Profesor de Informática",
+      "Date": "Ago 2025 – Presente",
+      "Description": [
+        "Enseñanza de Informática IGCSE y A-Level (AS & A2) — Currículo Cambridge International",
+        "Tutorización de un estudiante A-Level en el desarrollo de un Sistema de Gestión de Biblioteca en Python, ahora desplegado y en uso activo en el colegio",
+        "Asistencia al Taller de Corrección Cambridge IGCSE & O Level CS (0478/0984) — Oct–Nov 2025",
+        "Certificado por Anthropic en <span class='underline'>AI Fluency for Educators</span>"
       ]
     }
   ],
@@ -64,8 +73,19 @@
   "FeatureProjects.Label": "Proyecto Destacado",
   "FeatureProjects.Projects": [
     {
+      "Title": "HireFlow AI",
+      "Description": "Aplicación de automatización de escritorio que gestiona todo el proceso de solicitud de empleo en menos de 60 segundos. Pega una oferta de trabajo y la IA reescribe tu <span class='underline'>CV en LaTeX</span> con palabras clave optimizadas para ATS, detecta automáticamente el idioma (oferta en francés → CV en francés), compila un <span class='underline'>PDF</span> limpio, redacta una carta de presentación natural y envía el correo a RRHH — totalmente automatizado.",
+      "imgs": [
+        "assets/images/hireflow1.png",
+                "assets/images/hireflow3.png",
+
+        "assets/images/hireflow2.png"
+      ],
+      "Technologies": ["Python", "IA / LLM", "LaTeX", "Automatización", "SMTP", "Generación de PDF"]
+    },
+    {
       "Title": "HiveMind Academy",
-      "Description": "Plataforma integral de microservicios de e-learning con pipeline DevOps completo. Incluye autenticación de usuarios con <span class='underline'>Keycloak</span>, <span class='underline'>integración con Google Calendar</span>, <span class='underline'>integración con Gemini AI</span> y orquestación completa de contenedores. Construida con arquitectura moderna de microservicios y despliegue automatizado.",
+      "Description": "Plataforma e-learning de microservicios con pipeline DevOps completo. Incluye autenticación SSO con <span class='underline'>Keycloak</span>, <span class='underline'>integración de Google Calendar</span>, <span class='underline'>Gemini AI</span> y orquestación completa de contenedores con despliegue automatizado mediante ArgoCD y Kubernetes.",
       "imgs": [
         "assets/images/hive1.PNG",
         "assets/images/hive2.png",
@@ -77,7 +97,7 @@
     },
     {
       "Title": "EldSync",
-      "Description": "Aplicación de cuidado de adultos mayores diseñada para ayudar a gestionar y monitorear servicios de atención geriátrica. Incluye gestión integral de usuarios, programación de citas, monitoreo de salud y manejo seguro de datos con <span class='underline'>Spring Security</span>. Construida con tecnologías web modernas y diseño responsivo.",
+      "Description": "Aplicación web de atención a personas mayores con gestión completa de usuarios, programación de citas, monitorización de salud y manejo seguro de datos con <span class='underline'>Spring Security</span>. Interfaz moderna y responsive.",
       "imgs": [
         "assets/images/eld1.png",
         "assets/images/eld2.png",
@@ -86,72 +106,80 @@
         "assets/images/eld5.png"
       ],
       "Technologies": ["Spring Boot", "Angular", "Spring Security", "MySQL", "TypeScript"]
-    },
-    {
-      "Title": "Plataforma QuantStats",
-      "Description": "Plataforma de analíticas y estadísticas de fútbol que proporciona análisis integral de partidos, estadísticas de jugadores y métricas de rendimiento de equipos. Incluye procesamiento de datos en tiempo real, dashboards interactivos y analíticas avanzadas con backend <span class='underline'>Spring Boot</span> y frontend <span class='underline'>Angular</span> para una experiencia de usuario óptima.",
-      "imgs": [
-        "assets/images/quant1.png",
-        "assets/images/quant2.png",
-        "assets/images/quant3.png",
-        "assets/images/quant4.png"
-      ],
-      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "Analítica de Datos", "REST API"]
     }
   ],
 
   "OtherProjects.Title": "Más Proyectos",
   "OtherProjects.Projects": [
     {
-      "Title": "EcoCycle",
-      "Description": "Plataforma de gestión de reciclaje con características de seguridad integradas desarrollada como aplicaciones de escritorio y web. Incluye seguimiento de residuos, gestión de centros de reciclaje.",
-      "imgs": ["assets/images/eco1.png"],
+      "Title": "Belote Tunisie",
+      "Description": "Juego completo de Belote tunecina desarrollado con Flutter, con el reglamento tunecino íntegro, oponentes IA, seguimiento de puntuación y animaciones de cartas fluidas.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["JavaFX", "Symfony", "MySQL", "Aplicación de Escritorio", "Plataforma Web"]
+      "Technologies": ["Flutter", "Dart", "Desarrollo de Juegos", "Lógica IA"]
+    },
+    {
+      "Title": "Constructor de Formularios Angular",
+      "Description": "Constructor de formularios dinámico con campos drag-and-drop, validación personalizada, exportación de datos (CSV/JSON) e importación — desarrollado íntegramente en Angular.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Angular", "TypeScript", "RxJS", "Exportación CSV"]
+    },
+    {
+      "Title": "Sistema de Gestión de Biblioteca",
+      "Description": "Aplicación de escritorio en Python co-desarrollada con un estudiante de A-Level. Actualmente desplegada y en uso activo en CIS International School of Tunis para gestionar la biblioteca del colegio.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Python", "Aplicación Desktop", "SQLite"]
+    },
+    {
+      "Title": "Plataforma QuantStats",
+      "Description": "Plataforma de análisis y estadísticas de fútbol con procesamiento de datos en tiempo real, paneles interactivos y análisis avanzado de partidos.",
+      "imgs": ["assets/images/quant1.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "REST API"]
+    },
+    {
+      "Title": "EcoCycle",
+      "Description": "Plataforma de gestión de reciclaje disponible como aplicación de escritorio (JavaFX) y web (Symfony). Seguimiento de residuos y gestión de centros de reciclaje.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["JavaFX", "Symfony", "MySQL"]
     },
     {
       "Title": "Estación Meteorológica IoT",
-      "Description": "Estación meteorológica autónoma habilitada con Wi-Fi con múltiples sensores ambientales. Incluye recolección de datos en tiempo real, transmisión inalámbrica y dashboard de monitoreo basado en web.",
-      "imgs": ["assets/images/iot.png"],
+      "Description": "Estación meteorológica Wi-Fi autónoma con múltiples sensores ambientales, transmisión inalámbrica de datos en tiempo real y panel web de monitorización.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["IoT", "Wi-Fi", "Sensores", "Python", "Dashboard Web"]
+      "Technologies": ["IoT", "Python", "Wi-Fi", "Panel Web"]
     },
     {
-      "Title": "Demo de Pipeline DevOps",
-      "Description": "Demostración completa de pipeline CI/CD mostrando prácticas modernas de DevOps con pruebas automatizadas, construcción y despliegue a clúster Kubernetes.",
-      "imgs": ["assets/images/devops.png"],
+      "Title": "Evaluación de Seguridad",
+      "Description": "Proyecto de pruebas de penetración con Kali Linux y Metasploit para simular ataques antes y después de desplegar un firewall pfSense — demostrando una mejora medible en la seguridad de la red.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Seguridad de Red"]
+    },
+    {
+      "Title": "Demo Pipeline DevOps",
+      "Description": "Pipeline CI/CD completo con pruebas automatizadas, build y despliegue en Kubernetes usando Jenkins, GitLab CI, ArgoCD y Terraform.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
       "Technologies": ["Jenkins", "GitLab CI/CD", "Docker", "Kubernetes", "ArgoCD"]
-    },
-    {
-      "Title": "Arquitectura de Microservicios",
-      "Description": "Implementación de muestra de arquitectura de microservicios demostrando descubrimiento de servicios, gateway de API y patrones de comunicación entre servicios.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Spring Boot", "Docker", "Kubernetes", "Descubrimiento de Servicios"]
-    },
-    {
-      "Title": "Evaluación de Seguridad y Pruebas de Penetración",
-      "Description": "Proyecto de evaluación de seguridad usando Kali Linux y Metasploit para simular ataques antes y después de desplegar un firewall pfSense, mostrando protección de red mejorada.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Pruebas de Penetración"]
-    },
-    {
-      "Title": "Infraestructura como Código",
-      "Description": "Configuraciones de Terraform y Ansible para aprovisionamiento automatizado de infraestructura y gestión de configuración en AWS.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Terraform", "Ansible", "AWS", "Infraestructura como Código", "Automatización"]
     }
   ],
 
-  "Contact.Pretitle": "Y... ¿Ahora?",
-  "Contact.Title": "¡Saluda!",
-  "Contact.Content": "Me encantará saber de ti si quieres discutir nuevas oportunidades. Escríbeme y te responderé tan pronto como vea tu mensaje.",
+  "Contact.Pretitle": "¿Y ahora?",
+  "Contact.Title": "¡Hola!",
+  "Contact.Content": "Estoy abierto a roles de ingeniería de software, proyectos freelance y colaboraciones técnicas. Si quieres hablar de oportunidades o simplemente charlar sobre tecnología, escríbeme y te responderé en cuanto vea tu mensaje.",
   "Contact.Btn": "Contáctame",
   "Contact.Email": "abdallah.firas@outlook.fr",
   "Contact.Phone": "+216 93 637 575",

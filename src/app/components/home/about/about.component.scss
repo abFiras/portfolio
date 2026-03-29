@@ -1,389 +1,183 @@
 @use "./../../../../variables.scss" as *;
 
-.about{
+.about { padding: 0; }
 
-    .about-description{
-        margin-top: 30px;
-        max-width: 480px;
-        
-        .skills-section-title {
-            color: #ccd6f6;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 25px 0 15px 0;
-            font-family: $CodeFont;
-        }
-    }
-
-    .about-img-container{
-        margin: auto;
-        position: relative;
-        display: inline-block;
-        max-width: 350px;
-        width: 100%;
-
-        // Simplified and responsive background effect
-        &:after{
-            content: "";
-            border: 2px solid $Green;
-            z-index: 0;
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            top: 15px;
-            left: 15px;
-            background: linear-gradient(135deg, 
-                rgba(100, 255, 218, 0.08), 
-                rgba(100, 255, 218, 0.04)
-            );
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        // Simplified glow effect
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at center, 
-                rgba(100, 255, 218, 0.1) 0%, 
-                transparent 70%
-            );
-            border-radius: 8px;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        &:hover {
-            &:after {
-                transform: translate(-8px, -8px);
-                border-color: rgba(100, 255, 218, 0.9);
-                box-shadow: 0 15px 35px rgba(100, 255, 218, 0.25);
-                background: linear-gradient(135deg, 
-                    rgba(100, 255, 218, 0.12), 
-                    rgba(100, 255, 218, 0.06)
-                );
-            }
-            
-            &:before {
-                opacity: 1;
-            }
-        }
-
-        img{
-            z-index: 2;
-            position: relative;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            filter: grayscale(100%) contrast(1.15) brightness(0.9);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            
-            // Enhanced background for transparent images
-            background: linear-gradient(135deg, 
-                rgba(100, 255, 218, 0.03), 
-                rgba(100, 255, 218, 0.08),
-                rgba(100, 255, 218, 0.03)
-            );
-            
-            box-shadow: 
-                0 8px 25px rgba(0, 0, 0, 0.3),
-                0 0 0 1px rgba(100, 255, 218, 0.1);
-
-            &.clickable {
-                cursor: pointer;
-
-                &:hover {
-                    filter: grayscale(0%) contrast(1.1) brightness(1.1);
-                    transform: scale(1.03) translateY(-3px);
-                    box-shadow: 
-                        0 20px 40px rgba(0, 0, 0, 0.4),
-                        0 0 0 1px rgba(100, 255, 218, 0.4),
-                        0 0 25px rgba(100, 255, 218, 0.2);
-                }
-
-                &:active {
-                    transform: scale(0.98) translateY(1px);
-                    transition: all 0.1s ease;
-                }
-            }
-        }
-
-        // Responsive adjustments
-        @media (max-width: 1200px){
-            max-width: 300px;
-            
-            &:after {
-                top: 12px;
-                left: 12px;
-            }
-        }
-
-        @media (max-width: 992px){
-            max-width: 280px;
-        }
-
-        @media (max-width: 768px){
-            max-width: 250px;
-            
-            &:after {
-                top: 10px;
-                left: 10px;
-            }
-        }
-
-        @media (max-width: 500px){
-            max-width: 200px;
-            
-            &:after {
-                top: 8px;
-                left: 8px;
-            }
-        }
-
-        @media (max-width: 400px){
-            max-width: 180px;
-            
-            // Simplify effects on very small screens
-            &:after {
-                display: none;
-            }
-            
-            &:before {
-                display: none;
-            }
-            
-            img {
-                background: linear-gradient(135deg, 
-                    rgba(100, 255, 218, 0.06), 
-                    rgba(100, 255, 218, 0.1)
-                );
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            }
-        }
-    }
-
-    .skills-list{
-        display: grid;
-        grid-template-columns: repeat(2,minmax(140px,200px));
-        overflow: hidden;
-        padding: 0;
-        margin: 20px 0 0 0;
-        list-style: none;
-    }
-
-    .skill-element{
-        position: relative;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        font-size: 13px;
-        font-family: $CodeFont;
-        color: $Slate;
-        transition: all 0.2s ease;
-
-        span{
-            padding-bottom: 5px;
-            transition: all 0.2s ease;
-        }
-
-        &:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: #64ffda;
-            font-size: 14px;
-            line-height: 12px;
-            transition: all 0.2s ease;
-        }
-
-        &:hover {
-            color: #ccd6f6;
-            transform: translateX(5px);
-            
-            &:before {
-                color: lighten($Green, 20%);
-                transform: scale(1.2);
-            }
-            
-            span {
-                color: #e6f1ff;
-            }
-        }
-    }
+.about-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 48px;
 }
 
-// Improved modal styles
+/* ─── TEXT ─── */
+.about-text {
+  p {
+    font-size: 16px; line-height: 1.8;
+    color: $Slate; margin-bottom: 20px;
+    font-weight: 300;
+  }
+}
+
+.skills-heading {
+  font-family: $CodeFont; font-size: 14px;
+  color: $LightSlate; margin: 32px 0 20px;
+  font-weight: 400;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  list-style: none; padding: 0; margin: 0;
+}
+
+.skill-chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  background: rgba(100,255,218,0.03);
+  border: 1px solid rgba(100,255,218,0.08);
+  border-radius: 4px;
+  font-family: $CodeFont; font-size: 12px;
+  letter-spacing: 0.04em;
+  color: $LightSlate;
+  transition: all 0.3s $ease-out;
+  position: relative; overflow: hidden;
+
+  &::before {
+    content: ''; position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100,255,218,0.06), transparent);
+    transition: left 0.4s $ease-out;
+  }
+
+  &:hover {
+    background: rgba(100,255,218,0.08);
+    border-color: rgba(100,255,218,0.3);
+    color: $Green; transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(100,255,218,0.1);
+    &::before { left: 100%; }
+  }
+
+  .chip-icon { color: $Green; font-size: 10px; }
+}
+
+/* ─── PHOTO ─── */
+.about-photo-wrap {
+  position: sticky; top: 120px;
+  display: flex; justify-content: center;
+  padding: 20px;
+}
+
+.photo-frame {
+  position: relative; width: 100%; max-width: 320px;
+  border-radius: 6px; overflow: visible;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    .about-img { filter: none; transform: scale(1.03); }
+    .photo-overlay { opacity: 1; }
+    .photo-border-anim { opacity: 1; animation: borderSpin 3s linear infinite; }
+  }
+}
+
+.about-img {
+  width: 100%; border-radius: 6px; display: block;
+  filter: grayscale(25%) contrast(1.1);
+  transition: filter 0.5s $ease-out, transform 0.5s $ease-out, box-shadow 0.5s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  position: relative; z-index: 2;
+}
+
+.photo-overlay {
+  position: absolute; inset: 0; border-radius: 6px;
+  background: rgba(100,255,218,0.08);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s; z-index: 3;
+  cursor: pointer;
+  .photo-overlay-text {
+    font-family: $CodeFont; font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: $Green; font-weight: 500;
+  }
+}
+
+.photo-border-anim {
+  position: absolute; inset: -3px; border-radius: 8px;
+  border: 1.5px solid transparent;
+  background: linear-gradient($Navy, $Navy) padding-box,
+              linear-gradient(var(--angle,0deg), $Green, transparent, $GoldAccent, transparent, $Green) border-box;
+  opacity: 0; z-index: 1;
+}
+@property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+@keyframes borderSpin { to { --angle: 360deg; } }
+
+/* Decorative dots */
+.photo-accent-dot {
+  position: absolute; border-radius: 50%;
+  pointer-events: none;
+}
+.dot-1 {
+  width: 80px; height: 80px;
+  top: -20px; right: -20px;
+  background: radial-gradient(circle, rgba(100,255,218,0.12), transparent);
+  animation: dotFloat1 4s ease-in-out infinite;
+}
+.dot-2 {
+  width: 60px; height: 60px;
+  bottom: -10px; left: -10px;
+  background: radial-gradient(circle, rgba(200,169,110,0.1), transparent);
+  animation: dotFloat2 5s ease-in-out infinite;
+}
+@keyframes dotFloat1 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(6px,-8px);} }
+@keyframes dotFloat2 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(-4px,6px);} }
+
+/* ─── NO PHOTO FALLBACK ─── */
+.photo-frame.no-photo {
+  &::after {
+    content: '📸\A Add your photo:\A src/assets/images/firas.png';
+    white-space: pre;
+    position: absolute; inset: 0;
+    background: rgba(13,27,46,0.95);
+    display: flex; align-items: center; justify-content: center;
+    font-family: $CodeFont; font-size: 12px;
+    color: $Green; text-align: center; z-index: 10;
+    padding: 20px;
+    border: 2px dashed rgba(100,255,218,0.3);
+    border-radius: 6px;
+  }
+}
+
+/* ─── MODAL ─── */
 .image-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, 
-        rgba(10, 25, 47, 0.95), 
-        rgba(17, 34, 64, 0.95)
-    );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: modalFadeIn 0.3s ease-out;
-    
-    // Fallback for browsers without backdrop-filter support
-    @supports (backdrop-filter: blur(10px)) {
-        backdrop-filter: blur(10px);
-        background: linear-gradient(135deg, 
-            rgba(10, 25, 47, 0.8), 
-            rgba(17, 34, 64, 0.8)
-        );
-    }
+  position: fixed; inset: 0;
+  background: rgba(5,12,23,0.95);
+  backdrop-filter: blur(12px);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 9999;
 }
-
-.image-modal-container {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    // Simplified background effect
-    &::before {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-        background: radial-gradient(ellipse at center, 
-            rgba(100, 255, 218, 0.08) 0%, 
-            transparent 60%
-        );
-        border-radius: 16px;
-        z-index: -1;
-    }
-}
-
+.image-modal-container { position: relative; max-width: 90vw; max-height: 90vh; }
 .modal-image {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.6),
-        0 0 0 2px rgba(100, 255, 218, 0.3),
-        0 0 30px rgba(100, 255, 218, 0.15);
-    
-    background: linear-gradient(135deg, 
-        rgba(100, 255, 218, 0.04), 
-        rgba(100, 255, 218, 0.08),
-        rgba(100, 255, 218, 0.04)
-    );
-    filter: contrast(1.1) brightness(1.05);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    &:hover {
-        transform: scale(1.02);
-        filter: contrast(1.15) brightness(1.1);
-        box-shadow: 
-            0 30px 60px rgba(0, 0, 0, 0.7),
-            0 0 0 2px rgba(100, 255, 218, 0.4),
-            0 0 40px rgba(100, 255, 218, 0.2);
-    }
+  max-width: 100%; max-height: 90vh; border-radius: 8px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(100,255,218,0.2);
 }
-
 .modal-close-btn {
-    position: absolute;
-    top: -50px;
-    right: -10px;
-    background: rgba(100, 255, 218, 0.1);
-    border: 2px solid $Green;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: $Green;
-    font-size: 24px;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    &:hover {
-        background: rgba(100, 255, 218, 0.2);
-        transform: scale(1.1);
-        color: $White;
-        border-color: lighten(#64ffda, 15%);
-        box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
-    }
-
-    &:active {
-        transform: scale(0.95);
-    }
-
-    span {
-        line-height: 1;
-        margin-top: -2px;
-    }
+  position: absolute; top: -48px; right: 0;
+  background: rgba(100,255,218,0.08); border: 1px solid rgba(100,255,218,0.3);
+  border-radius: 50%; width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: none; color: $Green; transition: all 0.3s;
+  &:hover { background: rgba(100,255,218,0.15); transform: scale(1.1); }
 }
 
-// Responsive modal adjustments
-@media (max-width: 768px) {
-    .image-modal-container {
-        max-width: 95vw;
-        max-height: 85vh;
-        
-        &::before {
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-        }
-    }
-
-    .modal-close-btn {
-        top: -40px;
-        right: 0;
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
-    }
+/* ─── RESPONSIVE ─── */
+@media (max-width: 992px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo-wrap { position: static; order: -1; }
+  .photo-frame { max-width: 280px; }
+  .skills-list { grid-template-columns: repeat(2, 1fr); }
 }
-
-@media (max-width: 480px) {
-    .modal-close-btn {
-        top: -35px;
-        right: 5px;
-        width: 32px;
-        height: 32px;
-        font-size: 18px;
-    }
-}
-
-// Animation keyframes
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-// Responsive layout adjustments
-@media (min-width: 992px) and (max-width: 1300px){
-    .about-img-container{
-        margin-left: auto;
-        margin-right: 0;
-    }
-}
+@media (max-width: 480px) { .skills-list { grid-template-columns: repeat(2, 1fr); } }

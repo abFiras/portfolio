@@ -1,26 +1,31 @@
-<footer>
-    <div [@animateFooter]>
-        <ul class="footer-left-bar d-none d-md-block">
-            <li>
-                <a (click)='analyticsService.sendAnalyticEvent("click_github", "footer", "github")' href="https://github.com/abFiras" target='_blank'>
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <a (click)='analyticsService.sendAnalyticEvent("click_linkedin", "footer", "github")' href="https://www.linkedin.com/in/firas--abdallah/" target='_blank'>
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="footer-right-bar d-none d-md-block">
-            <a (click)='analyticsService.sendAnalyticEvent("click_send_mail", "footer", "email")' href="mailto:abdallah.firas@outlook.fr" target='_blank'>abdallah.firas&#64;outlook.fr</a>
-        </div>
-    </div>
+<footer [@animateFooter]>
 
-    <div class="footer-credits text-center" >
-        <a (click)='analyticsService.sendAnalyticEvent("click_github_portfolio_abFiras", "footer", "click")' href="https://github.com/abFiras" target="_blank" rel="nofollow noopener noreferrer">
-            <div>Built with Angular by Firas Abdallah</div>
-        </a>
+  
+
+  <div class="footer-right-bar d-none d-md-flex">
+    <a href="mailto:abdallah.firas@outlook.fr" target="_blank"
+       (click)='analyticsService.sendAnalyticEvent("click_email","footer","email")'>
+      abdallah.firas&#64;outlook.fr
+    </a>
+    <div class="side-line-v"></div>
+  </div>
+
+  <!-- ─── BOTTOM CENTER ─── -->
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>FA<span class="logo-bracket">/&gt;</span>
     </div>
+    <p class="footer-copy">
+      Designed &amp; Built by
+      <a href="https://github.com/abFiras" target="_blank">Firas Abdallah</a>
+    </p>
+    <div class="footer-mobile-socials d-flex d-md-none">
+      <a href="https://github.com/abFiras" target="_blank" class="mobile-social-link">GitHub</a>
+      <span class="footer-sep">·</span>
+      <a href="https://www.linkedin.com/in/firas--abdallah/" target="_blank" class="mobile-social-link">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <a href="mailto:abdallah.firas@outlook.fr" class="mobile-social-link">Email</a>
+    </div>
+  </div>
 
 </footer>

@@ -1,70 +1,109 @@
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { AnimationsService } from 'src/app/services/animations/animations.service';
+import emailjs from '@emailjs/browser';
+
+
+type ContactReason = 'work' | 'question' | 'student' | '';
 
 @Component({
-    selector: 'app-contact',
-    templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss'],
-    standalone: false
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss'],
+  standalone: false
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements OnInit {
+
+  private readonly EJS_SERVICE  = 'service_9rirokb';
+private readonly EJS_TEMPLATE = 'template_h07mzd4';
+private readonly EJS_KEY      = 'UYx6OpNcMaM7NMcrD';
+
+  form: FormGroup;
+  selectedReason: ContactReason = '';
+  submitted = false;
+  sending = false;
+
+  readonly reasons = [
+    {
+      value: 'work',
+      icon: '💼',
+      label: 'Work Opportunity',
+      desc: 'Hiring, freelance, or collaboration'
+    },
+    {
+      value: 'question',
+      icon: '💬',
+      label: 'General Question',
+      desc: 'Something you want to ask me'
+    },
+    {
+      value: 'student',
+      icon: '🎓',
+      label: 'Student Help',
+      desc: 'Free mentoring for students'
+    }
+  ];
+  sendSuccess: boolean;
+  sendError: boolean;
 
   constructor(
     public analyticsService: AnalyticsService,
-    private animationsService: AnimationsService,
-    private elementRef: ElementRef
-  ) { }
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      name:    ['', [Validators.required, Validators.minLength(2)]],
+      email:   ['', [Validators.required, Validators.email]],
+      reason:  ['', Validators.required],
+      subject: ['', Validators.required],
+      message: ['', [Validators.required, Validators.minLength(20)]],
+      isStudent: [false]
+    });
   }
 
-  ngAfterViewInit(): void {
-    this.initAnimations();
-  }
-
-  private initAnimations(): void {
-    const contactSection = this.elementRef.nativeElement;
-
-    // Animar contenedor del título
-    const titleContainer = contactSection.querySelector('.mb-4');
-    if (titleContainer) {
-      this.animationsService.observeElement(titleContainer, {
-        type: 'fadeInDown',
-        duration: 1000
-      });
-    }
-
-    // Animar título principal con typewriter
-    const mainTitle = contactSection.querySelector('.contact-title');
-    if (mainTitle) {
-      this.animationsService.observeElement(mainTitle, {
-        type: 'typewriter',
-        delay: 500
-      });
-    }
-
-    // Animar párrafo de descripción
-    const description = contactSection.querySelector('p');
-    if (description) {
-      this.animationsService.observeElement(description, {
-        type: 'morphIn',
-        duration: 1200,
-        delay: 2500
-      });
-    }
-
-    // Animar botón de contacto
-    const contactButton = contactSection.querySelector('.contact-btn');
-    if (contactButton) {
-      this.animationsService.observeElement(contactButton.parentElement as HTMLElement, {
-        type: 'scaleIn',
-        duration: 800,
-        delay: 3500
-      });
-
-      // Añadir efectos hover especiales al botón
-      this.animationsService.addHoverEffects(contactButton as HTMLElement, ['lift', 'glow']);
+  selectReason(value: ContactReason): void {
+    this.selectedReason = value;
+    this.form.patchValue({ reason: value });
+    if (value === 'student') {
+      this.form.patchValue({ isStudent: true });
+    } else {
+      this.form.patchValue({ isStudent: false });
     }
   }
+
+  get f() { return this.form.controls; }
+
+  send(): void {
+  this.submitted = true;
+  if (this.form.invalid) return;
+
+  this.sending = true;
+  const v = this.form.value;
+
+  emailjs.send(
+    this.EJS_SERVICE,
+    this.EJS_TEMPLATE,
+    {
+      from_name:  v.name,
+      from_email: v.email,
+      subject:    `[${v.reason.toUpperCase()}] ${v.subject}`,
+      reason: this.reasons.find(r => r.value === v.reason)?.label,
+      message:    v.message
+    },
+    this.EJS_KEY
+  ).then(() => {
+    this.sending = false;
+    this.sendSuccess = true;
+    this.form.reset();
+    this.submitted = false;
+    this.selectedReason = '';
+    setTimeout(() => this.sendSuccess = false, 5000);
+  }).catch((err) => {
+    console.error('EmailJS error:', err);
+    this.sending = false;
+    this.sendError = true;
+    setTimeout(() => this.sendError = false, 5000);
+  });
+}
 }

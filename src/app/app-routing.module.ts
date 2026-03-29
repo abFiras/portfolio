@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ArchiveComponent } from './components/archive/archive.component';
 
 const routes: Routes = [
-
-  {path: ':language?',      component: HomeComponent},
-  {path: ':language?/proyectos',   component: ArchiveComponent},
-  
-  // {path: 'profile'        ,   component: ProfileComponent         , canActivate: [AuthGuard]},
-  // {path: 'users'          ,   component: UsersComponent           , canActivate: [AuthGuard]},
-  // {path: 'register-user'  ,   component: RegisterUserComponent    , canActivate: [AuthGuard]},
-
-  {path: '**', pathMatch: 'full', redirectTo: '/'},
-
+  // Named language routes
+  { path: 'en',  component: HomeComponent },
+  { path: 'fr',  component: HomeComponent },
+  { path: 'es',  component: HomeComponent },
+  { path: 'de',  component: HomeComponent },
+  // Default — no language in URL
+  { path: '',    component: HomeComponent, pathMatch: 'full' },
+  // Catch-all
+  { path: '**',  redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {})
-  ],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

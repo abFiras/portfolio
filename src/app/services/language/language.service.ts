@@ -2,33 +2,51 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Location } from '@angular/common';
 
+export type SupportedLang = 'en' | 'fr' | 'es' | 'de';
+
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
 
-  language: "es" | "en";
+  language: SupportedLang = 'en';
+  readonly supportedLangs: SupportedLang[] = ['en', 'fr', 'es', 'de'];
 
   constructor(
     public translateService: TranslateService,
-    private location: Location,
+    private location: Location
   ) {}
 
-  initLanguage(){
-    this.translateService.addLangs(["en", "es"])
-    let language = navigator.language || (navigator as any).userLanguage;
-    language = language.split("-").includes("es") ? "es" : "en"
-    this.translateService.setDefaultLang(language)
+  initLanguage(): void {
+    this.translateService.addLangs(this.supportedLangs);
+    this.translateService.setDefaultLang('en');
 
-    // Change the URL without navigate:
-    this.location.go(language)
+    // Only use URL path lang if explicitly set, otherwise always default to English
+    const pathLang = this.getLangFromPath();
+    const chosen: SupportedLang = this.isSupported(pathLang) ? pathLang : 'en';
 
-    this.language=language
+    this.translateService.use(chosen);
+    this.language = chosen;
+
+    if (!pathLang) {
+      this.location.go('en');
+    }
   }
 
-  changeLanguage(language){
-    this.translateService.setDefaultLang(language)
-    this.location.go(language)
-    this.language=language
+  changeLanguage(lang: SupportedLang): void {
+    if (!this.isSupported(lang)) return;
+    this.language = lang;
+    // Reload the page with the new language in the URL — cleanest solution
+    window.location.href = '/' + lang;
+  }
+
+  private getLangFromPath(): SupportedLang | null {
+    const segments = window.location.pathname.replace(/^\//, '').split('/');
+    const first = segments[0] as SupportedLang;
+    return this.isSupported(first) ? first : null;
+  }
+
+  private isSupported(lang: string): lang is SupportedLang {
+    return this.supportedLangs.includes(lang as SupportedLang);
   }
 }

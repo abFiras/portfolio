@@ -1,34 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-more-proyects',
-    templateUrl: './more-proyects.component.html',
-    styleUrls: ['./more-proyects.component.scss'],
-    standalone: false
+  selector: 'app-more-proyects',
+  templateUrl: './more-proyects.component.html',
+  styleUrls: ['./more-proyects.component.scss'],
+  standalone: false
 })
-export class MoreProyectsComponent implements OnInit {
+export class MoreProyectsComponent implements OnInit, OnDestroy {
+  projects: any[] = [];
+  private sub: Subscription;
 
   constructor(
-    private router: Router,
-    public analyticsService: AnalyticsService
-    ) { }
+    public analyticsService: AnalyticsService,
+    private translate: TranslateService
+  ) {}
 
-    ngOnInit() {
-        this.router.events.subscribe((evt) => {
-            if (!(evt instanceof NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0)
-        });
-    }
-    redirect(route: string, event) {
-      const id = event.target.id;
-      if(id=='demoLink' || id=='ghLink'){
-        return
-      }
-      window.open(route, '_blank');
-    }
+  ngOnInit(): void {
+  this.sub = this.translate.stream('OtherProjects.Projects').subscribe((res: any) => {
+    this.projects = Array.isArray(res) ? res : [];
+  });
+}
 
+ngOnDestroy(): void {
+  if (this.sub) this.sub.unsubscribe();
+}
+
+  redirect(url: string, event: MouseEvent): void {
+    if ((event.target as HTMLElement).closest('a')) return;
+    if (url) window.open(url, '_blank');
+  }
+
+  
 }

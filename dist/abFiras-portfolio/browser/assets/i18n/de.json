@@ -4,58 +4,67 @@
   "Header.Item3": "Projekte",
   "Header.Item4": "Kontakt",
   "Header.cvBtn": "Lebenslauf",
-  "Header.cvName": "Firas_Abdallah_CV_enn.pdf",
-
+  "Header.cvName": "https://raw.githubusercontent.com/abFiras/cv/main/Firas_Abdallah_CV_de.pdf",
   "Banner.Pretitle": "Hallo! Mein Name ist",
   "Banner.Name": "Firas Abdallah",
-  "Banner.Title": "Full-Stack Entwickler & DevOps Ingenieur",
-  "Banner.Description": "Frisch graduierter Softwareingenieur-Student mit <span class='underline'>praktischer Erfahrung</span> in Full-Stack-Entwicklung und DevOps durch Praktika und akademische Projekte. Versiert in <span class='underline'>Spring Boot</span>, <span class='underline'>Angular</span>, <span class='underline'>Python</span>, Microservices-Architektur, <span class='underline'>CI/CD</span>, <span class='underline'>Docker</span>, <span class='underline'>Kubernetes</span> und Infrastructure as Code. Motiviert durch Automatisierung, Lernen und den Aufbau effizienter Entwicklungspipelines.",
+  "Banner.Title": "Software-Ingenieur & Informatiklehrer",
+  "Banner.Description": "Software-Ingenieur mit Schwerpunkt auf <span class='underline'>Full-Stack-Entwicklung</span> und <span class='underline'>DevOps</span> — Microservices, CI/CD-Pipelines und Automatisierungstools. Ich unterrichte außerdem Informatik nach dem <span class='underline'>Cambridge IGCSE & A-Level</span>-Lehrplan und verbinde professionelle Softwareentwicklung mit der Ausbildung der nächsten Entwicklergeneration.",
   "Banner.ActionBtn": "Hallo sagen",
 
   "AboutMe.Title": "Über mich",
   "AboutMe.Paragraphs": [
-    "Als <span class='underline'>Absolvent des Softwareingenieurwesens</span> mit praktischer Erfahrung sowohl in der <span class='underline'>Full-Stack-Entwicklung</span> als auch in der <span class='underline'>DevOps-Entwicklung</span> bringe ich ein umfassendes Verständnis des gesamten Software-Entwicklungslebenszyklus mit. Meine Reise hat mich durch verschiedene Rollen und Projekte geführt, in denen ich skalierbare Anwendungen erstellt und automatisierte Deployment-Pipelines entwickelt habe.",
-    "Meine Expertise reicht von der Entwicklung von Microservices-Architekturen mit Spring Boot und Angular bis zur Implementierung vollständiger DevOps-Pipelines mit Jenkins, GitLab CI/CD, ArgoCD und Kubernetes. Ich bin leidenschaftlich daran interessiert, effiziente, automatisierte Lösungen zu schaffen, die die Kluft zwischen Entwicklung und Betrieb überbrücken.",
-    "Ich gedeihe beim Erlernen neuer Technologien und deren Anwendung zur Lösung realer Probleme, sei es beim Aufbau von E-Learning-Plattformen, IoT-Lösungen oder bei der Implementierung von Sicherheitsmaßnahmen.",
-    "Einige der Technologien, mit denen ich ausgebildet und gearbeitet habe, umfassen (sind aber nicht beschränkt auf):"
+    "Ich bin <span class='underline'>Software-Ingenieur</span> mit praktischer Erfahrung in der Entwicklung von Full-Stack-Systemen und DevOps-Pipelines — von Microservices mit Spring Boot und Angular bis hin zu vollständiger CI/CD-Infrastruktur mit Jenkins, ArgoCD und Kubernetes.",
+    "Ich entwickle echte Tools: <span class='underline'>HireFlow AI</span> automatisiert den gesamten Bewerbungsprozess in unter 60 Sekunden — CV-Überarbeitung mit ATS-optimierten Keywords, PDF-Kompilierung, Anschreiben und automatischer E-Mail-Versand an die HR-Abteilung. Außerdem entwickle ich gerade ein tunesisches Belote-Kartenspiel in Flutter.",
+    "Neben der Softwareentwicklung unterrichte ich <span class='underline'>Cambridge IGCSE & A-Level Informatik</span> — ich betreue Schüler bei echten Projekten, darunter ein <span class='underline'>Bibliotheksverwaltungssystem</span>, das aktuell an der Schule im Einsatz ist.",
+    "Einige der Technologien, mit denen ich gearbeitet habe (u. a.) :"
   ],
 
   "Experience.Title": "Erfahrung",
   "Experience.Jobs": [
     {
       "Tab": "DPC Digital",
-      "Title": "Abschlussarbeit-Praktikant",
-      "Date": "Dez 2024 - Jun 2025",
+      "Title": "Abschlusspraktikum — Full-Stack & DevOps",
+      "Date": "Dez 2024 – Jun 2025",
       "Description": [
-        "Entwicklung von HiveMind Academy – E-Learning-Microservices-Plattform",
-        "Vollständige DevOps-Pipeline-Implementierung: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
-        "Microservices-Architektur-Entwicklung mit Spring Boot, Angular, Python Flask",
-        "Integration von Keycloak für Authentifizierung, Google Calendar APIs und Gemini AI",
-        "Infrastructure as Code Implementierung und Container-Orchestrierung"
+        "Entwicklung von HiveMind Academy — E-Learning-Plattform mit Microservices-Architektur",
+        "Implementierung einer vollständigen DevOps-Pipeline: Jenkins, GitLab CI/CD, ArgoCD, Kubernetes",
+        "Microservices-Entwicklung mit Spring Boot, Angular und Python Flask",
+        "Integration von Keycloak (SSO), Google Calendar API und Gemini AI",
+        "Infrastructure as Code und Ende-zu-Ende-Container-Orchestrierung"
       ]
     },
     {
       "Tab": "QuantStats",
-      "Title": "Full-Stack Entwickler",
-      "Date": "Jul - Aug 2024",
+      "Title": "Full-Stack-Entwickler",
+      "Date": "Jul – Aug 2024",
       "Description": [
-        "Multimedia-Modul und Benutzerverwaltungssystem-Entwicklung",
-        "Implementierung mit Spring Boot, Angular und MySQL Tech-Stack",
-        "Entwicklung von Multimedia-Upload-Features und Analytics-Dashboard",
-        "Datenbankdesign und API-Entwicklung für Content-Management",
-        "Frontend-Entwicklung mit responsiven Design-Prinzipien"
+        "Entwicklung eines Multimedia-Moduls und Benutzerverwaltungssystems",
+        "Tech-Stack: Spring Boot, Angular und MySQL",
+        "Implementierung von Multimedia-Upload-Funktionen und einem Analyse-Dashboard",
+        "Datenbankdesign und REST-API-Entwicklung für Content Management",
+        "Responsives Frontend mit Angular und TypeScript"
       ]
     },
     {
       "Tab": "FST El Manar",
-      "Title": "IoT Entwickler",
-      "Date": "Feb - Aug 2022",
+      "Title": "IoT-Entwickler",
+      "Date": "Feb – Aug 2022",
       "Description": [
-        "Entwicklung einer autonomen Wi-Fi-Wetterstation mit IoT-Sensoren",
-        "Integration verschiedener Umweltsensoren für Datensammlung",
-        "Implementierung drahtloser Kommunikationsprotokolle",
-        "Entwicklung von Datenvisualisierung und Überwachungssystem",
-        "Hardware-Software-Integration und Tests"
+        "Entwicklung einer autonomen Wi-Fi-Wetterstation mit IoT-Umgebungssensoren",
+        "Implementierung drahtloser Kommunikationsprotokolle für Echtzeit-Datenübertragung",
+        "Entwicklung eines webbasierten Monitoring-Dashboards für Live-Sensordaten",
+        "Vollständige Hardware-Software-Integration und Tests"
+      ]
+    },
+    {
+      "Tab": "CIS Tunis",
+      "Title": "Informatiklehrer",
+      "Date": "Aug 2025 – Heute",
+      "Description": [
+        "Unterricht in IGCSE- und A-Level-Informatik (AS & A2) nach Cambridge International Curriculum",
+        "Betreuung eines A-Level-Schülers bei der Entwicklung eines Bibliotheksverwaltungssystems in Python — jetzt aktiv im Schulbetrieb eingesetzt",
+        "Teilnahme am Cambridge IGCSE & O Level CS Korrektur-Workshop (0478/0984) — Okt–Nov 2025",
+        "Zertifiziert von Anthropic in <span class='underline'>AI Fluency for Educators</span>"
       ]
     }
   ],
@@ -64,8 +73,19 @@
   "FeatureProjects.Label": "Hervorgehobenes Projekt",
   "FeatureProjects.Projects": [
     {
+      "Title": "HireFlow AI",
+      "Description": "Desktop-Automatisierungsapp, die den gesamten Bewerbungsprozess in unter 60 Sekunden abwickelt. Fügen Sie eine Stellenbeschreibung ein und die KI überarbeitet Ihren <span class='underline'>LaTeX-Lebenslauf</span> mit ATS-optimierten Keywords, erkennt die Sprache automatisch (französische Ausschreibung → französischer CV), kompiliert ein sauberes <span class='underline'>PDF</span>, schreibt ein natürlich klingendes Anschreiben und versendet die E-Mail an HR — vollständig automatisiert.",
+      "imgs": [
+        "assets/images/hireflow1.png",
+        "assets/images/hireflow2.png",
+                "assets/images/hireflow3.png"
+
+      ],
+      "Technologies": ["Python", "KI / LLM", "LaTeX", "Automatisierung", "SMTP", "PDF-Generierung"]
+    },
+    {
       "Title": "HiveMind Academy",
-      "Description": "Umfassende E-Learning-Microservices-Plattform mit vollständiger DevOps-Pipeline. Beinhaltet Benutzerauthentifizierung mit <span class='underline'>Keycloak</span>, <span class='underline'>Google Calendar Integration</span>, <span class='underline'>Gemini AI</span> Integration und vollständige Container-Orchestrierung. Erstellt mit moderner Microservices-Architektur und automatisiertem Deployment.",
+      "Description": "Umfassende E-Learning-Microservices-Plattform mit vollständiger DevOps-Pipeline. Mit SSO-Authentifizierung via <span class='underline'>Keycloak</span>, <span class='underline'>Google Calendar-Integration</span>, <span class='underline'>Gemini AI</span> und vollständiger Container-Orchestrierung mit automatisiertem Deployment über ArgoCD und Kubernetes.",
       "imgs": [
         "assets/images/hive1.PNG",
         "assets/images/hive2.png",
@@ -77,7 +97,7 @@
     },
     {
       "Title": "EldSync",
-      "Description": "Altenpflege-Anwendung zur Verwaltung und Überwachung von Altenpflegediensten. Beinhaltet umfassendes Benutzermanagement, Terminplanung, Gesundheitsüberwachung und sichere Datenverarbeitung mit <span class='underline'>Spring Security</span>. Erstellt mit modernen Web-Technologien und responsivem Design.",
+      "Description": "Webanwendung für die Altenpflege mit umfassender Benutzerverwaltung, Terminplanung, Gesundheitsüberwachung und sicherer Datenverwaltung über <span class='underline'>Spring Security</span>. Modernes responsives Frontend.",
       "imgs": [
         "assets/images/eld1.png",
         "assets/images/eld2.png",
@@ -86,73 +106,81 @@
         "assets/images/eld5.png"
       ],
       "Technologies": ["Spring Boot", "Angular", "Spring Security", "MySQL", "TypeScript"]
-    },
-    {
-      "Title": "QuantStats Plattform",
-      "Description": "Fußball-Analytics und Statistik-Plattform mit umfassender Spielanalyse, Spielerstatistiken und Team-Performance-Metriken. Beinhaltet Echtzeit-Datenverarbeitung, interaktive Dashboards und erweiterte Analytics mit <span class='underline'>Spring Boot</span> Backend und <span class='underline'>Angular</span> Frontend für optimale Benutzererfahrung.",
-      "imgs": [
-        "assets/images/quant1.png",
-        "assets/images/quant2.png",
-        "assets/images/quant3.png",
-        "assets/images/quant4.png"
-      ],
-      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "Datenanalyse", "REST API"]
     }
   ],
 
   "OtherProjects.Title": "Weitere Projekte",
   "OtherProjects.Projects": [
     {
+      "Title": "Belote Tunisie",
+      "Description": "Vollständiges tunesisches Belote-Kartenspiel in Flutter, mit komplettem tunesischen Regelwerk, KI-Gegnern, Punktestand-Verfolgung und flüssigen Kartenanimationen.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Flutter", "Dart", "Spielentwicklung", "KI-Logik"]
+    },
+    {
+      "Title": "Angular Formular-Builder",
+      "Description": "Dynamischer Formular-Builder mit Drag-and-Drop-Feldern, benutzerdefinierter Validierung, Datenexport (CSV/JSON) und Importfunktion — vollständig in Angular entwickelt.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Angular", "TypeScript", "RxJS", "CSV-Export"]
+    },
+    {
+      "Title": "Bibliotheksverwaltungssystem",
+      "Description": "Python-Desktop-App, gemeinsam mit einem A-Level-Schüler entwickelt. Aktuell im aktiven Betrieb an der CIS International School of Tunis zur Verwaltung der Schulbibliothek.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Python", "Desktop-App", "SQLite"]
+    },
+    {
+      "Title": "QuantStats-Plattform",
+      "Description": "Fußball-Analyse- und Statistikplattform mit Echtzeit-Datenverarbeitung, interaktiven Dashboards und erweiterter Spielanalyse.",
+      "imgs": ["assets/images/quant1.png"],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Spring Boot", "Angular", "MySQL", "TypeScript", "REST API"]
+    },
+    {
       "Title": "EcoCycle",
-      "Description": "Recycling-Management-Plattform mit integrierten Sicherheitsfeatures, entwickelt sowohl als Desktop- als auch als Web-Anwendungen. Beinhaltet Abfallverfolgung, Recyclingzentren-Management und Benutzerengagement.",
-      "imgs": ["assets/images/eco1.png"],
+      "Description": "Recycling-Management-Plattform als Desktop-App (JavaFX) und Web-App (Symfony). Abfallverfolgung und Verwaltung von Recyclingzentren.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["JavaFX", "Symfony", "MySQL", "Desktop-Anwendung", "Web-Plattform"]
+      "Technologies": ["JavaFX", "Symfony", "MySQL"]
     },
     {
-      "Title": "IoT Wetterstation",
-      "Description": "Autonome Wi-Fi-fähige Wetterstation mit mehreren Umweltsensoren. Beinhaltet Echtzeit-Datensammlung, drahtlose Übertragung und webbasiertes Überwachungs-Dashboard.",
-      "imgs": ["assets/images/iot.png"],
+      "Title": "IoT-Wetterstation",
+      "Description": "Autonome Wi-Fi-Wetterstation mit mehreren Umgebungssensoren, drahtloser Echtzeit-Datenübertragung und webbasiertem Monitoring-Dashboard.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["IoT", "Wi-Fi", "Sensoren", "Python", "Web-Dashboard"]
+      "Technologies": ["IoT", "Python", "Wi-Fi", "Web-Dashboard"]
     },
     {
-      "Title": "DevOps Pipeline Demo",
-      "Description": "Vollständige CI/CD-Pipeline-Demonstration, die moderne DevOps-Praktiken mit automatisierten Tests, Build und Deployment auf Kubernetes-Cluster zeigt.",
-      "imgs": ["assets/images/devops.png"],
+      "Title": "Sicherheitsbewertung",
+      "Description": "Penetrationstest-Projekt mit Kali Linux und Metasploit zur Simulation von Angriffen vor und nach dem Einsatz einer pfSense-Firewall — mit messbarer Verbesserung der Netzwerksicherheit.",
+      "imgs": [],
+      "ghLink": "https://github.com/abFiras",
+      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
+      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Netzwerksicherheit"]
+    },
+    {
+      "Title": "DevOps-Pipeline-Demo",
+      "Description": "Vollständige CI/CD-Pipeline mit automatisierten Tests, Build und Deployment auf Kubernetes mit Jenkins, GitLab CI, ArgoCD und Terraform.",
+      "imgs": [],
       "ghLink": "https://github.com/abFiras",
       "demoLink": "https://www.linkedin.com/in/firas--abdallah",
       "Technologies": ["Jenkins", "GitLab CI/CD", "Docker", "Kubernetes", "ArgoCD"]
-    },
-    {
-      "Title": "Microservices-Architektur",
-      "Description": "Beispiel-Microservices-Architektur-Implementierung, die Service Discovery, API Gateway und Inter-Service-Kommunikationsmuster demonstriert.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Spring Boot", "Docker", "Kubernetes", "API Gateway", "Service Discovery"]
-    },
-    {
-      "Title": "Sicherheitsbewertung & Penetrationstests",
-      "Description": "Sicherheitsbewertungsprojekt mit Kali Linux und Metasploit zur Simulation von Angriffen vor und nach dem Einsatz einer pfSense-Firewall, das verbesserten Netzwerkschutz zeigt.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Kali Linux", "Metasploit", "pfSense", "Penetrationstests", "Netzwerksicherheit"]
-    },
-    {
-      "Title": "Infrastructure as Code",
-      "Description": "Terraform- und Ansible-Konfigurationen für automatisierte Infrastruktur-Bereitstellung und Konfigurationsmanagement auf AWS.",
-      "ghLink": "https://github.com/abFiras",
-      "demoLink": "https://www.linkedin.com/in/firas--abdallah",
-      "Technologies": ["Terraform", "Ansible", "AWS", "Infrastructure as Code", "Automatisierung"]
     }
   ],
 
-  "Contact.Pretitle": "Und... Jetzt?",
+  "Contact.Pretitle": "Und jetzt?",
   "Contact.Title": "Sag Hallo!",
-  "Contact.Content": "Ich würde mich freuen, von Ihnen zu hören, wenn Sie neue Möglichkeiten besprechen möchten. Schreiben Sie mir, und ich werde antworten, sobald ich Ihre Nachricht sehe.",
-  "Contact.Btn": "Kontaktiere mich",
+  "Contact.Content": "Ich freue mich über Nachrichten zu Software-Engineering-Stellen, Freelance-Projekten oder technischen Kooperationen. Schreib mir und ich antworte so schnell wie möglich.",
+  "Contact.Btn": "Kontakt",
   "Contact.Email": "abdallah.firas@outlook.fr",
   "Contact.Phone": "+216 93 637 575",
   "Contact.Location": "El Ghazela, Ariana, Tunesien",

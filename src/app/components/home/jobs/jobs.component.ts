@@ -1,73 +1,31 @@
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { AnimationsService } from 'src/app/services/animations/animations.service';
+import { Subscription } from 'rxjs';
 
 @Component({
-    selector: 'app-jobs',
-    templateUrl: './jobs.component.html',
-    styleUrls: ['./jobs.component.scss'],
-    standalone: false
+  selector: 'app-jobs',
+  templateUrl: './jobs.component.html',
+  styleUrls: ['./jobs.component.scss'],
+  standalone: false
 })
-export class JobsComponent implements OnInit, AfterViewInit {
-
-  active = 0
+export class JobsComponent implements OnInit, OnDestroy {
+  active = 0;
+  jobs: any[] = [];
+  private sub: Subscription;
 
   constructor(
     public analyticsService: AnalyticsService,
-    private animationsService: AnimationsService,
-    private elementRef: ElementRef
-  ) { }
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
-  }
+  this.sub = this.translate.stream('Experience.Jobs').subscribe((res: any) => {
+    this.jobs = Array.isArray(res) ? res : [];
+  });
+}
 
-  ngAfterViewInit(): void {
-    this.initAnimations();
-  }
-
-  private initAnimations(): void {
-    const jobsSection = this.elementRef.nativeElement;
-
-    // Animar título
-    const title = jobsSection.querySelector('.about-title');
-    if (title) {
-      this.animationsService.observeElement(title, {
-        type: 'slideInUp',
-        duration: 1000
-      });
-    }
-
-    // Animar contenedor de tabs
-    const tabsContainer = jobsSection.querySelector('.jobs-tabs');
-    if (tabsContainer) {
-      this.animationsService.observeElement(tabsContainer as HTMLElement, {
-        type: 'fadeInUp',
-        duration: 1200,
-        delay: 300
-      });
-    }
-
-    // Animar tabs individuales
-    const tabs = jobsSection.querySelectorAll('li[ngbNavItem]');
-    tabs.forEach((tab: HTMLElement, index: number) => {
-      this.animationsService.observeElement(tab, {
-        type: 'scaleIn',
-        delay: 600 + (index * 150)
-      });
-
-      // Añadir efectos hover
-      this.animationsService.addHoverEffects(tab, ['lift']);
-    });
-
-    // Animar contenido de trabajos (con delay para que aparezcan después de hacer click)
-    setTimeout(() => {
-      const jobDescriptions = jobsSection.querySelectorAll('.job-description');
-      jobDescriptions.forEach((desc: HTMLElement, index: number) => {
-        this.animationsService.observeElement(desc, {
-          type: 'fadeInLeft',
-          delay: index * 200
-        });
-      });
-    }, 1000);
-  }
+ngOnDestroy(): void {
+  if (this.sub) this.sub.unsubscribe();
+}
 }

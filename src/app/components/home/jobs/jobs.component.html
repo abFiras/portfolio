@@ -1,51 +1,76 @@
-<section class="section" id="jobs">
-  <div class="container jobs">
+<section class="section section-alt" id="jobs">
+  <div class="container">
     <div class="section-box">
-      <div class="about-title mb-5" data-animate="slideInUp" data-animate-duration="1000">
-        <h3 class="e-font section-title">
-          <span class="code-font n-section-title">02.</span>
+
+      <div class="sr">
+        <h3 class="section-title">
+          <span class="n-section-title">02.</span>
           {{ "Experience.Title" | translate }}
         </h3>
       </div>
-      <div class="jobs-tabs" data-animate="fadeInUp" data-animate-duration="1200" data-animate-delay="300">
-        <ul
-          ngbNav
-          #nav="ngbNav"
-          [(activeId)]="active"
-          orientation="vertical"
-          class="nav-tabs jobs-tabs"
-        >
-          <li
-            *ngFor="let job of 'Experience.Jobs' | translate; let i = index"
-            [title]="job.Tab"
-            [ngbNavItem]="i"
-            data-animate="scaleIn"
-            [attr.data-animate-delay]="600 + (i * 150)"
-          >
-            <a ngbNavLink>{{ job.Tab }}</a>
-            <ng-template ngbNavContent>
-              <h4 class="title-tab-content">
-                {{ job.Title }} |
-                <span class="company-tab-content">{{ job.Tab }}</span>
-              </h4>
-              <h5 class="job-time">{{ job.Date }}</h5>
-              <!-- {{job.Description | json}} -->
-              <p
-                *ngFor="
-                  let jobDescriptionParagraph of job.Description;
-                  let i = index
-                "
-                class="job-description"
-                [innerHTML]="jobDescriptionParagraph | translate"
-                data-animate="fadeInLeft"
-                [attr.data-animate-delay]="i * 200"
-              ></p>
-              <span></span>
-            </ng-template>
-          </li>
-        </ul>
-        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+      <div class="jobs-layout sr sr-d2" *ngIf="jobs.length > 0">
+
+        <!-- Tab buttons -->
+        <div class="jobs-tabs-list">
+          <button
+            *ngFor="let job of jobs; let i = index"
+            class="job-tab-btn"
+            [class.active]="active === i"
+            (click)="active = i">
+            <span class="tab-indicator" [class.active]="active === i"></span>
+            {{ job.Tab }}
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div class="jobs-content">
+          <div
+            *ngFor="let job of jobs; let i = index"
+            class="job-panel"
+            [class.active]="active === i">
+
+            <div class="job-header">
+              <div>
+                <h4 class="job-title">
+                  {{ job.Title }}
+                  <span class="job-at"> @ </span>
+                  <span class="job-company">{{ job.Tab }}</span>
+                </h4>
+                <div class="job-date">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  {{ job.Date }}
+                </div>
+              </div>
+              <span class="job-index">0{{ i + 1 }}</span>
+            </div>
+
+            <ul class="job-bullets">
+              <li
+                *ngFor="let desc of job.Description; let j = index"
+                class="job-bullet"
+                [style.animation-delay]="(j * 0.08) + 's'"
+                [innerHTML]="desc">
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
       </div>
+
+      <!-- Loading state -->
+      <div class="jobs-loading" *ngIf="jobs.length === 0">
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
+      </div>
+
     </div>
   </div>
 </section>
