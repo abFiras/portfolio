@@ -16,9 +16,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 0;
   border: 1px solid rgba(100,255,218,0.06);
-  border-radius: 6px;
+  border-radius: 20px;
   overflow: hidden;
-  background: $LightNavy;
+  background: linear-gradient(180deg, rgba(7,12,24,0.96), rgba(8,16,30,0.98));
   transition: border-color 0.4s, box-shadow 0.4s;
 
   &:nth-child(even) {
@@ -38,7 +38,7 @@
   position: relative;
   aspect-ratio: 16/10;
   overflow: hidden;
-  background: $LightestNavy;
+  background: linear-gradient(160deg, rgba(100,255,218,0.06), rgba(7,12,24,0.9));
 }
 
 .card-images { position: absolute; inset: 0; }

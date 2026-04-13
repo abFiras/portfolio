@@ -12,10 +12,10 @@
 /* ─── CARD ─── */
 .more-card {
   position: relative;
-  padding: 28px 28px 32px;
-  background: $Navy;
-  border: 1px solid rgba(100,255,218,0.06);
-  border-radius: 6px;
+  padding: 32px 30px 36px;
+  background: linear-gradient(180deg, rgba(7,12,24,0.95), rgba(10,18,34,0.98));
+  border: 1px solid rgba(100,255,218,0.12);
+  border-radius: 20px;
   cursor: none;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s;
@@ -84,10 +84,8 @@
 /* Hover accent line */
 .more-card-hover-line {
   position: absolute; bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, $Green, $GoldAccent);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 0.4s $ease-out;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(100,255,218,0.9), rgba(200,169,110,0.9));
 }
 
 /* ─── RESPONSIVE ─── */

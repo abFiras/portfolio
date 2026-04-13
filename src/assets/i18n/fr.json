@@ -1,8 +1,9 @@
 {
   "Header.Item1": "À propos",
-  "Header.Item2": "Expérience",
-  "Header.Item3": "Projets",
-  "Header.Item4": "Contact",
+  "Header.Item2": "Certifications",
+  "Header.Item3": "Expérience",
+  "Header.Item4": "Projets",
+  "Header.Item5": "Contact",
   "Header.cvBtn": "CV",
   "Header.cvName": "https://raw.githubusercontent.com/abFiras/cv/main/Firas_Abdallah_CV_fr.pdf",
   "Banner.Pretitle": "Hello ! Je m'appelle",
@@ -71,6 +72,8 @@
 
   "FeatureProjects.Title": "Mes Projets",
   "FeatureProjects.Label": "Projet Phare",
+  "Certifications.Title": "Certifications et Badges",
+  "Certifications.Subtitle": "Un portfolio de certifications numériques vérifiées en cloud, IA, DevOps et développement web.",
   "FeatureProjects.Projects": [
     {
       "Title": "HireFlow AI",

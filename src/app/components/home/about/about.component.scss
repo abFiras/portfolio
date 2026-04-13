@@ -63,6 +63,67 @@
   .chip-icon { color: $Green; font-size: 10px; }
 }
 
+.certifications-section {
+  margin-top: 40px;
+}
+
+.certifications-description {
+  color: $Slate; margin: 16px 0 24px; font-size: 15px; line-height: 1.7;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cert-card {
+  display: flex; flex-direction: column;
+  background: rgba(100,255,218,0.03);
+  border: 1px solid rgba(100,255,218,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: none;
+
+  img {
+    width: 100%; height: 120px; object-fit: contain;
+    background: rgba(255,255,255,0.02);
+    padding: 18px;
+  }
+
+  .cert-card-body {
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 16px;
+    min-height: 90px;
+  }
+
+  strong {
+    display: block; font-size: 14px; color: $LightestSlate; line-height: 1.4;
+  }
+
+  span {
+    font-family: $CodeFont; font-size: 12px; color: $LightSlate;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(100,255,218,0.12);
+  }
+}
+
+@media (max-width: 1120px) {
+  .certifications-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .certifications-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 540px) {
+  .certifications-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── PHOTO ─── */
 .about-photo-wrap {
   position: sticky; top: 120px;

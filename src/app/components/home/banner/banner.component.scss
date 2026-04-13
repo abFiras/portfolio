@@ -57,9 +57,18 @@
   background: radial-gradient(circle, rgba(100,149,237,0.04) 0%, transparent 70%);
   animation: orbFloat3 8s ease-in-out infinite;
 }
-@keyframes orbFloat1 { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-40px) scale(1.05);} }
-@keyframes orbFloat2 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(20px,-20px) scale(1.08);} }
-@keyframes orbFloat3 { 0%,100%{transform:translate(0,0);} 50%{transform:translate(-30px,20px);} }
+@keyframes orbFloat1 {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  50% { transform: translateY(-50px) scale(1.1) rotate(5deg); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0,0) scale(1) rotate(0deg); }
+  50% { transform: translate(30px,-30px) scale(1.12) rotate(-5deg); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0,0) scale(1) rotate(0deg); }
+  50% { transform: translate(-40px,30px) scale(1.08) rotate(3deg); }
+}
 
 /* ─── SIDE ELEMENTS ─── */
 .banner-side-left, .banner-side-right {
@@ -71,25 +80,34 @@
 .banner-side-right { right: 32px; }
 
 .side-link {
-  color: $Slate; transition: all 0.3s $ease-out;
-  opacity: 0; animation: fadein 0.5s ease forwards;
-  &:nth-child(1) { animation-delay: 2.2s; }
-  &:nth-child(2) { animation-delay: 2.4s; }
-  &:nth-child(3) { animation-delay: 2.6s; }
-  &:hover { color: $Green; transform: translateY(-4px); }
+  color: $Slate;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  opacity: 0; animation: enterSlideUp 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  &:nth-child(1) { animation-delay: 1.8s; }
+  &:nth-child(2) { animation-delay: 2.0s; }
+  &:nth-child(3) { animation-delay: 2.2s; }
+  &:hover {
+    color: $Green;
+    transform: translateY(-6px) scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(100,255,218,0.4));
+  }
 }
 .side-line {
   width: 1px; height: 80px;
   background: linear-gradient(to bottom, $Slate, transparent);
-  opacity: 0; animation: fadein 0.5s ease 2.8s forwards;
+  opacity: 0; animation: enterSlideUp 0.6s ease-out 2.4s forwards;
 }
 .side-email {
   writing-mode: vertical-rl;
   font-family: $CodeFont; font-size: 11px;
   letter-spacing: 0.15em; color: $Slate;
-  transition: color 0.3s, transform 0.3s;
-  opacity: 0; animation: fadein 0.5s ease 2.2s forwards;
-  &:hover { color: $Green; transform: translateY(-4px); }
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  opacity: 0; animation: enterSlideUp 0.6s ease-out 1.8s forwards;
+  &:hover {
+    color: $Green;
+    transform: translateY(-6px);
+    filter: drop-shadow(0 0 12px rgba(100,255,218,0.4));
+  }
 }
 
 /* ─── MAIN CONTENT ─── */
@@ -140,12 +158,18 @@
   animation: rotateRing 14s linear infinite;
 }
 @keyframes floatRightShape {
-  0%,100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-16px) rotate(2deg); }
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-12px) rotate(1.5deg) scale(1.01); }
+  50% { transform: translateY(-20px) rotate(3deg) scale(1.02); }
+  75% { transform: translateY(-10px) rotate(1.5deg) scale(1.01); }
 }
 @keyframes rotateRing {
   0% { transform: translate(-50%, -50%) rotate(0deg); }
   100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes enterSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes glowPulse {
   0%,100% { transform: scale(1); opacity: 0.9; }
@@ -154,14 +178,29 @@
 
 /* ─── PRETITLE ─── */
 .banner-pretitle {
-  font-family: $CodeFont; font-size: 14px;
-  color: $Green; margin: 0 0 20px;
+  font-family: $CodeFont; font-size: 13px;
+  color: rgba(100,255,218,0.95); margin: 0 0 24px;
   opacity: 0; transform: translateY(-20px);
-  animation: fadeSlideDown 0.6s $ease-out 1.5s forwards;
-  display: flex; align-items: center; gap: 10px;
-  .pretitle-number { color: rgba(100,255,218,0.5); }
+  animation: titleSlideIn 0.7s cubic-bezier(0.34,1.56,0.64,1) 1.4s forwards;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 500; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  .pretitle-number { color: rgba(100,255,218,0.6); font-weight: 600; }
+  .pretitle-line {
+    width: 24px; height: 1px;
+    background: linear-gradient(90deg, $Green, transparent);
+    animation: lineExpand 0.8s cubic-bezier(0.34,1.56,0.64,1) 1.4s forwards;
+    opacity: 0;
+  }
 }
-@keyframes fadeSlideDown { to { opacity: 1; transform: translateY(0); } }
+@keyframes titleSlideIn {
+  from { opacity: 0; transform: translateY(-16px) translateX(-8px); }
+  to { opacity: 1; transform: translateY(0) translateX(0); }
+}
+@keyframes lineExpand {
+  from { width: 0; opacity: 0; }
+  to { width: 24px; opacity: 1; }
+}
 
 /* ─── NAME with GLITCH ─── */
 .banner-name-wrap {
@@ -173,90 +212,156 @@
   font-size: clamp(56px, 9vw, 100px);
   font-weight: 900; line-height: 1.0;
   letter-spacing: -0.03em;
-  color: $LightestSlate; margin: 0;
-  opacity: 0; transform: translateY(30px);
-  animation: nameReveal 1s $ease-expo 1.8s forwards;
+  background: linear-gradient(135deg, $LightestSlate 0%, rgba(100,255,218,0.95) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  opacity: 0; transform: translateY(40px) scaleY(0.8);
+  animation: nameReveal 1.1s cubic-bezier(0.34,1.56,0.64,1) 1.65s forwards;
+  text-shadow: 0 0 40px rgba(100,255,218,0.2);
+  filter: drop-shadow(0 0 30px rgba(100,255,218,0.1));
 
   &.glitch-layer {
     position: absolute; top: 0; left: 0;
     opacity: 0; user-select: none; pointer-events: none;
   }
-  &.g1 { color: #ff2d55; animation: glitch1 3s steps(2) 4s infinite; }
-  &.g2 { color: $Green; animation: glitch2 3s steps(2) 4.15s infinite; }
+  &.g1 { color: #ff2d55; animation: glitch1 3s steps(2) 4.2s infinite; }
+  &.g2 { color: $Green; animation: glitch2 3s steps(2) 4.35s infinite; }
 }
-@keyframes nameReveal { to { opacity: 1; transform: translateY(0); } }
+@keyframes nameReveal {
+  from { opacity: 0; transform: translateY(40px) scaleY(0.8) perspective(1000px) rotateX(20deg); }
+  to { opacity: 1; transform: translateY(0) scaleY(1) perspective(1000px) rotateX(0deg); }
+}
 @keyframes fadein { to { opacity: 1; } }
 
 /* ─── SUBTITLE ─── */
 .banner-subtitle {
   font-family: $MainFont;
   font-size: clamp(28px, 4vw, 48px);
-  font-weight: 600; line-height: 1.1;
-  color: $Slate; margin: 4px 0 32px;
+  font-weight: 500; line-height: 1.2;
+  background: linear-gradient(135deg, $Slate 0%, rgba(100,255,218,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 12px 0 36px;
   min-height: 1.2em;
-  opacity: 0; animation: fadein 0.1s ease 2.6s forwards;
+  opacity: 0; animation: subtitleReveal 0.9s cubic-bezier(0.34,1.56,0.64,1) 2.6s forwards;
 }
 .type-cursor {
-  color: $Green; opacity: 1;
-  animation: blink 1s step-end infinite;
+  background: linear-gradient(135deg, $Green, rgba(100,255,218,0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 1;
+  animation: blink 1.2s step-end infinite;
+  font-weight: 600;
 }
-@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+@keyframes subtitleReveal { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: blur(0); } }
 
 /* ─── DESCRIPTION ─── */
 .banner-description {
-  max-width: 520px; margin-bottom: 40px;
-  opacity: 0; filter: blur(4px);
-  transform: translateY(16px);
-  animation: descReveal 0.9s $ease-expo 3.2s forwards;
-  p { font-size: 17px; line-height: 1.7; color: $Slate; font-weight: 300; }
+  max-width: 520px; margin-bottom: 44px;
+  opacity: 0; filter: blur(8px);
+  transform: translateY(24px);
+  animation: descReveal 1s cubic-bezier(0.34,1.56,0.64,1) 3.1s forwards;
+  p {
+    font-size: 16px; line-height: 1.8; color: rgba(209, 213, 219, 0.95); font-weight: 300;
+    letter-spacing: 0.02em;
+  }
 }
 @keyframes descReveal { to { opacity: 1; filter: blur(0); transform: translateY(0); } }
 
 /* ─── CTA BUTTONS ─── */
 .banner-cta {
   display: flex; gap: 16px; flex-wrap: wrap;
-  opacity: 0; transform: translateY(16px);
-  animation: ctaReveal 0.8s $ease-spring 3.6s forwards;
+  opacity: 0; transform: translateY(24px);
+  animation: ctaReveal 0.9s cubic-bezier(0.34,1.56,0.64,1) 3.5s forwards;
 }
 @keyframes ctaReveal { to { opacity: 1; transform: translateY(0); } }
 .cta-primary {
   display: inline-flex; align-items: center; gap: 10px;
-  svg { transition: transform 0.3s; }
-  &:hover svg { transform: translateX(4px); }
+  position: relative;
+  background: linear-gradient(135deg, rgba(100,255,218,0.12), rgba(100,255,218,0.05));
+  border: 2px solid rgba(100,255,218,0.4);
+  overflow: hidden;
+  svg {
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  &::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(100,255,218,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  &:hover {
+    border-color: $Green;
+    box-shadow: 0 0 30px rgba(100,255,218,0.3), inset 0 0 20px rgba(100,255,218,0.08);
+    svg { transform: translateX(6px); }
+    &::before { transform: translateX(100%); }
+  }
 }
-.cta-secondary { border-color: rgba(100,255,218,0.3); color: $LightSlate; }
-.cta-secondary:hover { border-color: $Green; color: $Green; }
+.cta-secondary {
+  border-color: rgba(100,255,218,0.25);
+  color: $Slate;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  &:hover {
+    border-color: $Green;
+    color: $Green;
+    box-shadow: 0 0 25px rgba(100,255,218,0.3);
+  }
+}
 
 /* ─── STATS BAR ─── */
 .banner-stats {
-  display: flex; align-items: center; gap: 28px;
-  margin-top: 56px; padding-top: 32px;
-  border-top: 1px solid rgba(100,255,218,0.08);
-  opacity: 0; animation: fadein 0.8s ease 4s forwards;
+  display: flex; align-items: center; gap: 32px;
+  margin-top: 64px; padding-top: 36px;
+  border-top: 1px solid rgba(100,255,218,0.12);
+  opacity: 0; animation: statsReveal 0.9s cubic-bezier(0.34,1.56,0.64,1) 3.9s forwards;
   flex-wrap: wrap;
 }
-.stat-item { display: flex; flex-direction: column; gap: 4px; }
+@keyframes statsReveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.stat-item {
+  display: flex; flex-direction: column; gap: 6px;
+  opacity: 0;
+  animation: enterSlideUp 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  &:nth-child(1) { animation-delay: 4.0s; }
+  &:nth-child(3) { animation-delay: 4.1s; }
+  &:nth-child(5) { animation-delay: 4.2s; }
+}
 .stat-num {
-  font-family: $DisplayFont; font-size: 28px; font-weight: 700;
-  color: $LightestSlate; letter-spacing: -0.02em;
+  font-family: $DisplayFont; font-size: 32px; font-weight: 800;
+  background: linear-gradient(135deg, $LightestSlate, $Green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
   display: flex; align-items: center; gap: 8px;
+  filter: drop-shadow(0 0 8px rgba(100,255,218,0.1));
 }
 .stat-label {
-  font-family: $CodeFont; font-size: 11px;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: $Slate;
+  font-family: $CodeFont; font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(100,255,218,0.7);
+  font-weight: 500;
 }
-.stat-divider { width: 1px; height: 40px; background: rgba(100,255,218,0.1); }
+.stat-divider { width: 1px; height: 50px; background: linear-gradient(180deg, rgba(100,255,218,0.2), transparent); }
 .live-indicator { font-family: $MainFont; font-size: 14px; font-weight: 500; color: $Green; }
 .live-dot {
-  width: 8px; height: 8px; background: $Green;
+  width: 10px; height: 10px; background: $Green;
   border-radius: 50%; display: inline-block;
   animation: livePulse 2s ease-in-out infinite;
-  box-shadow: 0 0 0 0 rgba(100,255,218,0.4);
+  box-shadow: 0 0 0 0 rgba(100,255,218,0.6);
+  margin-right: 6px;
 }
 @keyframes livePulse {
-  0% { box-shadow: 0 0 0 0 rgba(100,255,218,0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(100,255,218,0); }
+  0% { box-shadow: 0 0 0 0 rgba(100,255,218,0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(100,255,218,0); }
   100% { box-shadow: 0 0 0 0 rgba(100,255,218,0); }
 }
 

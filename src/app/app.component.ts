@@ -29,11 +29,11 @@ export class AppComponent implements OnInit, AfterViewInit {
       if (loader) loader.classList.add('loaded');
     };
     if (document.readyState === 'complete') {
-      setTimeout(done, 3200);
+      setTimeout(done, 3800);
     } else {
-      window.addEventListener('load', () => setTimeout(done, 3200));
+      window.addEventListener('load', () => setTimeout(done, 3800));
     }
-    setTimeout(done, 5200); // hard fallback
+    setTimeout(done, 5500); // hard fallback
   }
 
   private initCursor(): void {

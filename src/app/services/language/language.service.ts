@@ -34,17 +34,16 @@ export class LanguageService {
   }
 
   changeLanguage(lang: SupportedLang): void {
-    if (!this.isSupported(lang)) return;
-    this.language = lang;
-    // Reload the page with the new language in the URL — cleanest solution
-    window.location.href = '/' + lang;
-  }
+  if (!this.isSupported(lang)) return;
+  this.language = lang;
+  window.location.href = '/portfolio/' + lang;
+}
 
   private getLangFromPath(): SupportedLang | null {
-    const segments = window.location.pathname.replace(/^\//, '').split('/');
-    const first = segments[0] as SupportedLang;
-    return this.isSupported(first) ? first : null;
-  }
+  const segments = window.location.pathname.replace(/^\/portfolio\//, '').split('/');
+  const first = segments[0] as SupportedLang;
+  return this.isSupported(first) ? first : null;
+}
 
   private isSupported(lang: string): lang is SupportedLang {
     return this.supportedLangs.includes(lang as SupportedLang);

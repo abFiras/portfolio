@@ -1,8 +1,9 @@
 {
   "Header.Item1": "About Me",
-  "Header.Item2": "Experience",
-  "Header.Item3": "Projects",
-  "Header.Item4": "Contact",
+  "Header.Item2": "Certifications",
+  "Header.Item3": "Experience",
+  "Header.Item4": "Projects",
+  "Header.Item5": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "https://raw.githubusercontent.com/abFiras/cv/main/Firas_Abdallah_CV_en.pdf",
   "Banner.Pretitle": "Hello! My name is",
@@ -71,6 +72,8 @@
 
   "FeatureProjects.Title": "My Projects",
   "FeatureProjects.Label": "Highlighted Project",
+  "Certifications.Title": "Certifications & Badges",
+  "Certifications.Subtitle": "A curated portfolio of verified digital credentials for cloud, AI, DevOps, and web development.",
   "FeatureProjects.Projects": [
     {
       "Title": "HireFlow AI",
