@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774811662320,
+  "timestamp": 1776089216566,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/portfolio/favicon.ico",
         "/portfolio/index.html",
-        "/portfolio/main-Z6QPG4GY.js",
+        "/portfolio/main-EQN2ZRK7.js",
         "/portfolio/manifest.webmanifest",
         "/portfolio/polyfills-CQZK2RGY.js",
-        "/portfolio/styles-CXCE2DT6.css"
+        "/portfolio/styles-JZR2V6S7.css"
       ],
       "patterns": []
     },
@@ -77,6 +77,17 @@
         "/portfolio/assets/i18n/es.json",
         "/portfolio/assets/i18n/fr.json",
         "/portfolio/assets/icons/folder.svg",
+        "/portfolio/assets/images/certifications/AI-Fluency-for-educators.png",
+        "/portfolio/assets/images/certifications/Build-Your-First-Chatbot.png",
+        "/portfolio/assets/images/certifications/Deploy-Kubernetes-Applications-on-Google-Cloud.png",
+        "/portfolio/assets/images/certifications/Digital-Sticker_-Introduction-to-Retrieval-Augmented-Generation.png",
+        "/portfolio/assets/images/certifications/Digital-Sticker_The-Rise-of-Multiagent-Systems.png",
+        "/portfolio/assets/images/certifications/Digital-Sticker_Unleashing-the-Power-of-AI-Agents.png",
+        "/portfolio/assets/images/certifications/Google-Analytics-Certification.png",
+        "/portfolio/assets/images/certifications/Modernize-Infrastructure-and-Applications-with-Google-Cloud.png",
+        "/portfolio/assets/images/certifications/Python-Programming-From-Basics-to-Advanced.jpg",
+        "/portfolio/assets/images/certifications/lifelong-professional-skills.png",
+        "/portfolio/assets/images/certifications/web-development-fundamentals.png",
         "/portfolio/assets/images/devops.png",
         "/portfolio/assets/images/eco1.png",
         "/portfolio/assets/images/eld1.png",
@@ -154,11 +165,22 @@
     "/portfolio/assets/fonts/SFMono/SFMono-SemiboldItalic.woff": "4bb2ddc7da8064698328e123bd3ec673f674a90d",
     "/portfolio/assets/fonts/SFMono/SFMono-SemiboldItalic.woff2": "3621c6894388833626fd4cf132087a3f46a54a21",
     "/portfolio/assets/fonts/SFMono/stylesheet.css": "9d845bf2b6a9e53e38bfc797758fbe38c2b99470",
-    "/portfolio/assets/i18n/de.json": "603f47c6837b20e0f177fe0afcf55f1a2f134821",
-    "/portfolio/assets/i18n/en.json": "35488643f35780ac6a4166924b6e39e4859e103c",
-    "/portfolio/assets/i18n/es.json": "c9a20d1f0dc600038b0f9389887f35655c275d46",
-    "/portfolio/assets/i18n/fr.json": "b472fc00533c247dc93b2520969680f2023b419c",
+    "/portfolio/assets/i18n/de.json": "66c6610a4fc7134401435923049238fa39e51b5d",
+    "/portfolio/assets/i18n/en.json": "1e6d950c539df1b9c483e87f367af23c5d35caef",
+    "/portfolio/assets/i18n/es.json": "582a2447864586436484717bdb89c46fd7291820",
+    "/portfolio/assets/i18n/fr.json": "8b90e2ffaa2c8ecb4de2dfba590747a84513ea7a",
     "/portfolio/assets/icons/folder.svg": "024e52150f03c8e0f77d17979a27ae94830678be",
+    "/portfolio/assets/images/certifications/AI-Fluency-for-educators.png": "ff339716d1f00efba6bfc3ce14e442b442f620c5",
+    "/portfolio/assets/images/certifications/Build-Your-First-Chatbot.png": "3c973acc9ca24a78f44fa235470f3ba952963578",
+    "/portfolio/assets/images/certifications/Deploy-Kubernetes-Applications-on-Google-Cloud.png": "b72a3b6fffd23f19fb2bb60bbe5eb51d727eff7e",
+    "/portfolio/assets/images/certifications/Digital-Sticker_-Introduction-to-Retrieval-Augmented-Generation.png": "2f99bf3679bf4a7647006a99971e8f1f2bb9e9fc",
+    "/portfolio/assets/images/certifications/Digital-Sticker_The-Rise-of-Multiagent-Systems.png": "61797ad87c627d2735b0e3cabd639a650909f01c",
+    "/portfolio/assets/images/certifications/Digital-Sticker_Unleashing-the-Power-of-AI-Agents.png": "590cfa26fae181d4edf4652ea434fc88a0315417",
+    "/portfolio/assets/images/certifications/Google-Analytics-Certification.png": "5800c7ceee499c18ee8d51f5c0a820c183e08359",
+    "/portfolio/assets/images/certifications/Modernize-Infrastructure-and-Applications-with-Google-Cloud.png": "1902528b27a0522d006c95c7bec7ea6a70b90f1a",
+    "/portfolio/assets/images/certifications/Python-Programming-From-Basics-to-Advanced.jpg": "4f3b0d39f0d71afeee917f1fbd774be75b984d59",
+    "/portfolio/assets/images/certifications/lifelong-professional-skills.png": "c931a033ff3e9e26d6300130df47af6a6be9bf37",
+    "/portfolio/assets/images/certifications/web-development-fundamentals.png": "0863b245bfd24f47f89cb2f0ed18c91a029054ff",
     "/portfolio/assets/images/devops.png": "45cd895f270d31593cf4731cffcd2eb55a7fa104",
     "/portfolio/assets/images/eco1.png": "15b0a23661d11ccf850b6fd0a36caae640462c05",
     "/portfolio/assets/images/eld1.png": "3fca3976b4e7eaf1a6b3409c95f737957401a9d3",
@@ -187,11 +209,11 @@
     "/portfolio/assets/images/quant4.png": "9216e737688e827fc4f2ea462b8ba69a81ceba9b",
     "/portfolio/assets/images/wolf logo.PNG": "936263f816ca8a88fc78cf246c35a2038abd33e3",
     "/portfolio/favicon.ico": "936263f816ca8a88fc78cf246c35a2038abd33e3",
-    "/portfolio/index.html": "75d0ee91a3fd4fbd33538d5c64296871c88d6672",
-    "/portfolio/main-Z6QPG4GY.js": "3fde9d9ec4fec2d342153ed913890a4a50701f4b",
+    "/portfolio/index.html": "48a846609c2bd1841636935c4a764c41c09c2ff5",
+    "/portfolio/main-EQN2ZRK7.js": "502a4b408f0c89ac28763e3334b08bcfe8dc1fd4",
     "/portfolio/manifest.webmanifest": "c8edb28266b02a8c803a110d571f1d1430d32845",
     "/portfolio/polyfills-CQZK2RGY.js": "bf02eddaeea9a385afd1d56994168bba943fc820",
-    "/portfolio/styles-CXCE2DT6.css": "deda7a6d09aa3b11c61f9d668482b7ada4fe4faf"
+    "/portfolio/styles-JZR2V6S7.css": "da77f82f2cdc934b797c1658617bce7fbd2cc798"
   },
   "navigationUrls": [
     {
