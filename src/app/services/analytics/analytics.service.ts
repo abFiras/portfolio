@@ -1,21 +1,31 @@
 import { Injectable } from '@angular/core';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { environment } from '../../../environments/environment';
+
+declare let gtag: Function;
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnalyticsService {
 
-  constructor(
-    private $gaService: GoogleAnalyticsService
-  ) { }
+  constructor() { }
 
-  sendAnalyticEvent(action: string, category: string, label){
-    this.$gaService.event(action, category, label)
+  sendAnalyticEvent(action: string, category: string, label: string){
+    if (typeof gtag !== 'undefined') {
+      gtag('event', action, {
+        event_category: category,
+        event_label: label
+      });
+    }
   }
 
   sendAnalyticPageView(path: string, title: string){
-    this.$gaService.pageView(path, title)
+    if (typeof gtag !== 'undefined') {
+      gtag('config', environment.gaId, {
+        page_path: path,
+        page_title: title
+      });
+    }
   }
 
 }

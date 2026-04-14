@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/home/home.component.scss"],
-  "sourcesContent": ["main {\n  display: block;\n  overflow-x: hidden;\n}\n\n/* Alternate section backgrounds */\napp-about    { display: block; background: #050c17; }\napp-jobs     { display: block; background: #0d1b2e; }\napp-proyects { display: block; background: #050c17; }\napp-more-proyects { display: block; background: #0d1b2e; }\napp-contact  { display: block; background: #050c17; }\n"],
-  "mappings": ";AAAA;AACE,WAAA;AACA,cAAA;;AAIF;AAAe,WAAA;AAAgB,cAAA;;AAC/B;AAAe,WAAA;AAAgB,cAAA;;AAC/B;AAAe,WAAA;AAAgB,cAAA;;AAC/B;AAAoB,WAAA;AAAgB,cAAA;;AACpC;AAAe,WAAA;AAAgB,cAAA;;",
-  "names": []
-}
